@@ -10,7 +10,7 @@ public:
               How do we know that we have reached the half of the number?
               Answer: when the original number is less than the reversed number, it means we've processed half of the number digits.
               
-              O(log_10 (n)) and O(1) space. 
+             Complexity: O(log_10 (n)) and O(1) space. 
           */
           
           
@@ -26,8 +26,7 @@ public:
           
           /*
               To be a palindrome an even digit number (1221), in this line out of while given number and reverse would be same. 
-              For odd digit number (121), x would be 1 and reverse would be 12. So to not consider the last digit(2) that is attached now with
-              reverse we divide the reverse. That is it. 
+              For odd digit number (121), x would be 1 and reverse would be 12. So to not consider the last digit(2) that is attached now with reverse we divide the reverse. That is it. 
           */
           return x == reverse || x == reverse/10; 
       
@@ -61,7 +60,7 @@ public:
 
 
 
-/* Approach 3: converting integer to string. 
+/* Approach 3: converting integer to string. Complexity: O(n) and O(n)
 
     bool isPalindrome(int x) {
         
