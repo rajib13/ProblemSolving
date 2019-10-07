@@ -60,7 +60,7 @@ public:
 
 
 
-/* Approach 3: converting integer to string. Complexity: O(n) and O(n)
+/* Approach 3: converting integer to string. Complexity: time O(n) and space is O(n)
 
     bool isPalindrome(int x) {
         
