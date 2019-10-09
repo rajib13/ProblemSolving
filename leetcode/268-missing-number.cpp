@@ -19,10 +19,10 @@ public:
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
-        int missing = nums.size(); // Crucial, because may be this will not present in the array.
+        int missing = nums.size(); // Crucial, because may be this number will not present in the array.
         
         for(int i = 0; i<nums.size(); i++){
-            missing ^= i ^ nums[i];
+            missing ^= i ^ nums[i]; // Idea: as we know if we xor two times a number it will give us zero. We are given all numbers from 0 to n except one number. So, for any given number and one of the positions will be same as the number and we xored them.
         }
         return missing;
     }
