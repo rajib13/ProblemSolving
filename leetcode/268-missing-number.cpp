@@ -4,12 +4,12 @@ public:
         
         /*Approach 3: In approach 1, there could be a overflow. Here we chekced it.*/
         
-        int result = nums.size(); 
+        int diff = nums.size(); // Crucial to get the length of the array.
         for(int i = 0; i < nums.size(); i++){
             
-            result += i - nums[i];
+            diff += i - nums[i];
         }
-        return result;
+        return diff;
     }
 };
 
