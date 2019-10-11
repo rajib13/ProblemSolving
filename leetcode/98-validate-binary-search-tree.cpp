@@ -15,6 +15,7 @@ public:
         if(root == NULL) return true; //Edge case
         
         /*
+	    Approach 2: 
             Idea: Like inorder traversal we will find out the smallest value node and then will make sure every node is less than the minn.
             minn is initially zero and every time will update with the root. 
         */
@@ -28,7 +29,7 @@ public:
                 root = root->left;
             }
             
-            root = nodes.top(); nodes.pop();
+            root = nodes.top(); nodes.pop();s
             
             if( minn != NULL && minn->val >= root->val) return false;
             minn = root; 
@@ -42,7 +43,7 @@ public:
 };
 
 
-/* Approach 2: recursive O(N) time and space complexity (since we keep up to the entire tree)
+/* Approach 1: recursive O(N) time and space complexity (since we keep up to the entire tree)
 
     bool validateHelper(TreeNode* root, long minn, long maxx){ //receive as LONG otherwise in line 18 there will be integer overflow error if root->val == INT_MAX
         if(root == NULL) return true;
