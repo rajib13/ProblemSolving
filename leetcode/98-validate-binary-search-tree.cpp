@@ -15,13 +15,13 @@ public:
         if(root == NULL) return true; //Edge case
         
         /*
-	    Approach 2: 
             Idea: Like inorder traversal we will find out the smallest value node and then will make sure every node is less than the minn.
             minn is initially zero and every time will update with the root. 
         */
         stack<TreeNode*> nodes;
         
-        TreeNode* minn = NULL; 
+        long minn = long(INT_MIN) - 1; 
+        cout<<minn<<endl;
         
         while(root != NULL || !nodes.empty()){      
             while(root != NULL){
@@ -29,10 +29,10 @@ public:
                 root = root->left;
             }
             
-            root = nodes.top(); nodes.pop();s
+            root = nodes.top(); nodes.pop();
             
-            if( minn != NULL && minn->val >= root->val) return false;
-            minn = root; 
+            if(minn >= root->val) return false;
+            minn = root->val; 
             root = root->right;
         }
 
@@ -43,7 +43,7 @@ public:
 };
 
 
-/* Approach 1: recursive O(N) time and space complexity (since we keep up to the entire tree)
+/* Approach 2: recursive O(N) time and space complexity (since we keep up to the entire tree)
 
     bool validateHelper(TreeNode* root, long minn, long maxx){ //receive as LONG otherwise in line 18 there will be integer overflow error if root->val == INT_MAX
         if(root == NULL) return true;
@@ -68,6 +68,7 @@ public:
 [5,3,7,2,4,6,8,1,null,null,null,null,null,null,10]
 []
 [1]
+[-2147483648]
 
 
 */
