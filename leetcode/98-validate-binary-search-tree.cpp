@@ -20,8 +20,7 @@ public:
         */
         stack<TreeNode*> nodes;
         
-        long minn = long(INT_MIN) - 1; 
-        cout<<minn<<endl;
+        long minn = long(INT_MIN) - 1; // ********* Casting to long from int is must, root->val == INT_MIN is possible. 
         
         while(root != NULL || !nodes.empty()){      
             while(root != NULL){
