@@ -1,2 +1,2 @@
 # Problem Solving 
-In this repository I will commit only some interesting problem solutions from Leetcode, hackerrank, codeforces etc.
+In this repository I commit regularly the solutions of some interesting problems from Leetcode, hackerrank, codeforces etc.
