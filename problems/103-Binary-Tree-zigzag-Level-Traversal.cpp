@@ -16,7 +16,7 @@ public:
         if(root == NULL) return ret; 
         
         vector<int> levelNodes;
-        queue<TreeNode*> nodes;
+        queue<TreeNode*> nodes; // for level order traversal we apply BFS on the tree.
         
         nodes.push(root);
         int level = 0; 
@@ -29,10 +29,10 @@ public:
                 if(root->left) nodes.push(root->left);
                 if(root->right) nodes.push(root->right);
             }
-            if(level % 2) reverse(levelNodes.begin(), levelNodes.end());
+            if(level % 2) reverse(levelNodes.begin(), levelNodes.end()); // Finally reversing the order for zigzag. 
             ret.push_back(levelNodes);
-            levelNodes.clear();
-            level++;
+            levelNodes.clear(); // crucial
+            level++; // increment of the level
         }
     return ret;         
     }
