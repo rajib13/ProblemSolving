@@ -32,7 +32,7 @@ public:
         queue<TreeNode*> nodes; // Queue for BFS
         nodes.push(root); // Push root to the queue so that while loop works.
         
-        int minn = 1; 
+        int depth = 1; 
         while(!nodes.empty()){
             
             int qSize = nodes.size(); // it is crucial to determine here, if you want to find the Q size at for loop, there will be a problem, think what?
@@ -41,7 +41,7 @@ public:
             
                 root = nodes.front(); nodes.pop();
                 
-                if(root->left == NULL and root->right == NULL) return minn;
+                if(root->left == NULL and root->right == NULL) return depth;
 
                 if(root->left){
                     nodes.push(root->left);
@@ -51,9 +51,9 @@ public:
                     nodes.push(root->right);
                 } 
             }
-            minn++;
+            depth++;
         }
-        return minn; 
+        return depth; 
     }
 
 */
