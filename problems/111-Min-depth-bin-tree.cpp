@@ -10,7 +10,7 @@
 class Solution {
 public:
     int minDepth(TreeNode* root) {
-        /*Recursion, better time but space is so poor (33%)*/
+        /*Approach 2: Recursion. O(n) runtime, and O(logn) space - DFS*/
         if(root == NULL) return 0;
         if(root->right == NULL) return 1 + minDepth(root->left);
         
@@ -25,7 +25,7 @@ public:
     int minDepth(TreeNode* root) {
         
         
-        // My solution: 100% space optimized.
+        // Approach 1: 100% space optimized. O(n) runtime, O(n) space - BFS level order traversal
         
         if(root == NULL) return 0; // Edge Case;
 
