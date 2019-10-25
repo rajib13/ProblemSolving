@@ -17,6 +17,6 @@ public:
             fast = fast->next->next;
             if(slow == fast) return true; // Success case
         }
-        return false; // Otherwise.
+        return false; // In all other cases.
     }
 };
