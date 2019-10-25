@@ -12,7 +12,7 @@ public:
         ListNode* slow = head; // pointer 1
         ListNode* fast = head; // pointer 2
         
-        while(fast and fast->next){
+        while(fast && fast->next){
             slow = slow->next;
             fast = fast->next->next;
             if(slow == fast) return true; // Success case
