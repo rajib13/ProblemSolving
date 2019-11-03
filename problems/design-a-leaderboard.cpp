@@ -5,7 +5,7 @@ public:
     
     Leaderboard() {
         scores.clear();
-        scores.resize(10005);
+        scores.resize(10005); // We need to resize the vector every time the constructor being called.
     }
     
     
