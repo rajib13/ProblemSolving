@@ -1,7 +1,7 @@
 
 /*
 
-Given an initial array arr, every day you produce a new array using the array of the previous day.
+1243. Given an initial array arr, every day you produce a new array using the array of the previous day.
 
 On the i-th day, you do the following operations on the array of day i-1 to produce the array of day i:
 
