@@ -1,10 +1,22 @@
+/*
+    Assignment of Kepler Communications.
+    Rajib Das
+    rajib.das@uleth.ca
+    437 982 4104
+
+    PS: For detailed comments, please see the documentation.
+*/
+
+
 #include<iostream>
 #include<vector>
 #include<algorithm>
 
 using namespace std;
+// As a data structure we are going to use a 2D vector.
 vector<vector<int>> ranges;
 
+// Interval data structure.
 class IntervalDS{
 public:
     
@@ -14,24 +26,27 @@ public:
 
     void Add(int start, int end){
         if(ranges.size() == 0){
+            // Empty data structure
             ranges.push_back({start, end});
         }
         else{
-            if(end < ranges[0][0]){
-                ranges.push_back({start, end});
-            }
-            else if(start > ranges[ranges.size() - 1][1]){
+            /* Two boundary cases, e.g., original state [(5, 10)], Add (0, 5) (resp. Add(15, 20))
+                which is left side or below (resp. right side or above) of the [(5, 10)]. So we 
+                do not need to check the whole list. 
+            */
+            if(end < ranges[0][0] || start > ranges[ranges.size() - 1][1]){
                 ranges.push_back({start, end});
             }
             else{
                 for(int i = 0; i < ranges.size(); i++){
-                    if(ranges[i][1] >= start){
-                        if(ranges[i][0] <= end){
+                    // General case
+                    if(ranges[i][1] >= start && ranges[i][0] <= end){
                             ranges[i][0] = min(ranges[i][0], start);
                             ranges[i][1] = max(ranges[i][1], end);
                         }
-                    }
+                        
                     if(i < ranges.size() - 1){
+                        // If two adjacent ranges can be merged.
                         if(ranges[i][1] >= ranges[i+1][0]){
                             ranges[i][1] = max(ranges[i][1], ranges[i+1][1]);
                             ranges.erase(ranges.begin() + (i+1));
@@ -48,11 +63,13 @@ public:
         for(int i = 0; i < rangeSize; i++){
 
             if(ranges[i][0] >= start && ranges[i][1] <= end){
+                // If there is a full overlap, delete the range from the list.
                 ranges.erase(ranges.begin() + (i));
                 rangeSize--;
             }
 
             if(ranges[i][0] < start){
+                // Update the list if there is small overlap.
                 if(ranges[i][1] > end){
                     ranges.push_back({end, ranges[i][1]});
                 }
@@ -70,14 +87,19 @@ public:
 
         vector<vector<int>> res;
         for(int i = 0; i < ranges.size(); i++){
+            // Find the overlapping element with the Get(a, b) and store them into a 2D list. 
             if(ranges[i][0] < end && ranges[i][1] > start){
                 res.push_back({ranges[i][0], ranges[i][1]});
             }
         }
         return res;
     }
-
+    /* The state of the data structure befor and after calling either of the Add, Delete,
+    and Get functions. Here, we use built in sort function and that helps us to check the 
+    given range with the list elements that are already present.  
+    */
     void stateOfRanges(){
+        
         cout << "State of the Data Structure : " << endl;
         if(ranges.size() == 0) 
             cout<< "Empty!" << endl;
@@ -93,7 +115,7 @@ public:
     }
 };
 
-
+/*Driver function to initiate the program.*/
 int main(){
     IntervalDS* obj = new IntervalDS();
     int choice;
