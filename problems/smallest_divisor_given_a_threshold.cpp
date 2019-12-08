@@ -30,6 +30,10 @@ So, it will not be accepted.
 idea: As in worst case the nums length could be more than 10^4, so if we can reduce it to 10^3 then we can use O(n^2) solution. We increase our divisor by 100. Whenever we get 
 sum <= t, we start calculating sum for last 100 divisor like egg dropping problem. 
 
+Complexity:
+	time = O(n^2)
+	space = O(1)
+
 class Solution {
 public:
     int helper(int l, int h, int d, vector<int>& nums, int t){
