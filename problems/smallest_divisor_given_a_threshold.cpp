@@ -4,7 +4,7 @@ public:
     int smallestDivisor(vector<int>& nums, int threshold) {
         int low = 1; 
         int high = 1e6;
-	/*O(nlogn) and O(1) solution*/
+	/*O(nlogn) time and O(1) space complexity solution*/
         
         while(low <= high){
             int mid = (low + high)/2;
