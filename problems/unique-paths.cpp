@@ -20,7 +20,8 @@ public:
 class Solution {
 public:
     int uniquePaths(int row, int col) {
-        Approach 2:  We don't need 2D vector. We only two rows, to make the second row from the first one. 
+        //Approach 2:  We don't need 2D vector, two rows are enough to produce the result. We generate the second row from the first one.
+ 
         vector<vector<int>> dp(2, vector<int> (col, 1));
         
         for(int r = 1; r < row; r++){
