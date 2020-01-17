@@ -3,7 +3,7 @@ public:
     
     int smallestDivisor(vector<int>& nums, int threshold) {
         int low = 1; 
-        int high = 1e6;
+        int high = 1e6; // maximum possible length
         
         while(low <= high){
             int mid = (low + high)/2;
