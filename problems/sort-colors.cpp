@@ -1,7 +1,7 @@
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
-        
+        // Approach: 2 pointer search.
         int redPointer = 0; 
         int bluePointer = nums.size() - 1; 
         
