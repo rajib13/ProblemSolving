@@ -11,3 +11,17 @@ public:
         return count;
     }
 };
+
+/*
+class Solution {
+public:
+    int numberOfSteps (int num) {
+        if(num == 0) return 0; // Edge Case
+        
+        int bits = log2(num); // number of bits to represent num
+        int ones = bitset<32>(num).count(); // number of ones in binary format, because to subtract means there is a one.
+        
+        return bits + ones;
+    }
+};
+*/
