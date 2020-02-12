@@ -1,0 +1,16 @@
+class Solution {
+public:
+    bool checkIfExist(vector<int>& arr) {
+        
+        unordered_set<double> set;
+        for(int num : arr){
+            double val = double(num);
+            if(set.find(val) != set.end()) return true;
+            else {
+                set.insert(val * 2.0);
+                set.insert(val /2.0);
+            }
+        }
+        return false;
+    }
+};
