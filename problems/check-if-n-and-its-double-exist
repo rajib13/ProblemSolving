@@ -4,7 +4,7 @@ public:
         /* Idea: For every element of array we will insert its double and half. Once we found an element in set we are done. */
         unordered_set<double> set;
         for(int num : arr){
-            double val = double(num); 
+            double val = double(num); // 3/2 == 1 (int), also 2/2 = 1 so to make sure we are inserting right element into the set.
             if(set.find(val) != set.end()) return true;
             else {
                 set.insert(val * 2.0);
