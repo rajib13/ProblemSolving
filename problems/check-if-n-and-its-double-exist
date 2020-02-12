@@ -1,10 +1,10 @@
 class Solution {
 public:
     bool checkIfExist(vector<int>& arr) {
-        
+        /* Idea: For every element of array we will insert its double and half. Once we found an element in set we are done. */
         unordered_set<double> set;
         for(int num : arr){
-            double val = double(num);
+            double val = double(num); 
             if(set.find(val) != set.end()) return true;
             else {
                 set.insert(val * 2.0);
