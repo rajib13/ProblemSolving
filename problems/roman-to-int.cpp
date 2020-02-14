@@ -2,20 +2,20 @@ class Solution {
 public:
     int romanToInt(string s) {
         
-        unordered_map<char, int> mp;
-        mp['I'] = 1;
-        mp['V'] = 5;
-        mp['X'] = 10;
-        mp['L'] = 50;
-        mp['C'] = 100;
-        mp['D'] = 500;
-        mp['M'] = 1000;
+        unordered_map<char, int> exchange; // To map the map and integer number. 
+        exchange['I'] = 1;
+        exchange['V'] = 5;
+        exchange['X'] = 10;
+        exchange['L'] = 50;
+        exchange['C'] = 100;
+        exchange['D'] = 500;
+        exchange['M'] = 1000;
         
         int ret = 0;
         for(int i = 0 ; i  < s.size(); i++){
 
-            if(i+1 < s.size() and mp[s[i]] < mp[s[i+1]]) ret -= mp[s[i]];
-            else ret += mp[s[i]];
+            if(i+1 < s.size() and exchange[s[i]] < exchange[s[i+1]]) ret -= exchange[s[i]];
+            else ret += exchange[s[i]];
     
         }
         return ret;
