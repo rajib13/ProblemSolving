@@ -13,8 +13,7 @@ public:
         
         int ret = 0;
         for(int i = 0 ; i  < s.size(); i++){
-
-            if(i+1 < s.size() and exchange[s[i]] < exchange[s[i+1]]) ret -= exchange[s[i]];
+            if(i+1 < s.size() and exchange[s[i]] < exchange[s[i+1]]) ret -= exchange[s[i]]; // Only if the next number is greater than the current number then we need to deduct it from the sum.
             else ret += exchange[s[i]];
     
         }
