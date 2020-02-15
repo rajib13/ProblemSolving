@@ -17,7 +17,7 @@ public:
         
         if(root->val == 0 and root->left == NULL and root->right == NULL) return NULL;
         
-        return root;
+        return root; 
         
     }
 };
