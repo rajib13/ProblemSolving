@@ -9,7 +9,7 @@ public:
     void add(int num) {
         if(num == 0){
             vec.clear(); 
-            vec.push_back(1);
+            vec.push_back(1); // We start all over again.
         }
         else vec.push_back(vec.back() * num);
     }
