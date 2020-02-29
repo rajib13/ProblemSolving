@@ -9,7 +9,7 @@ public:
         unordered_map<char, int> chars;
         
         int maxx = INT_MIN;
-        int i = 0; // first pointere
+        int i = 0; // first pointer
         for(int j = 0; j < s.size(); j++){ // j = 2nd pointer
             if(chars.count(s[j])){
                 i = max(i, chars[s[j]] + 1);
