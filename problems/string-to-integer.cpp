@@ -4,6 +4,7 @@ public:
         int ret = 0;
         int state = 0; 
         bool sign = false;
+	/*Approach: DFA, similar to 65. Valid number.*/
         
         for(char ch : str){
             
@@ -29,30 +30,3 @@ public:
         return ret; 
     }
 };
-
-/*
-
-"42"
-"   -42"
-"4193 with words"
-"words and 987"
-"-91283472332"
-""
-"+"
-"-"
-"--123"
-"+-123"
-"- 123"
-"+ words"
-"- words"
-"12-23"
-"-12-23"
-"123 456"
-"-+1"
-"2147483646"
-"-2147483648"
-"-2147483649"
-"-2147483647"
-"2147483647"
-"2147483648"
-*/
