@@ -9,22 +9,32 @@
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-
-        int len = 0;
         
-        ListNode* ptr1 = head;
-        //Counting the total number of nodes
-        ListNode* ptr2 = head;
+        ListNode *ptr1 = head, *ptr2 = head;
+        int nodeCount = 0; 
         while(ptr2){
             ptr2 = ptr2->next;
-            len++;
-            if(len > n){
+            if(nodeCount > n){
                 ptr1 = ptr1->next;
             }
+            nodeCount++;
         }
-        cout << ptr1->val << " ";
+        if(n == nodeCount) return head->next;
         ptr1->next = ptr1->next->next;
         return head; 
         
     }
 };
+
+/*
+[1,2,3,4,5]
+1
+[1,2,3,4,5]
+2
+[1,2,3,4,5]
+3
+[1,2,3,4,5]
+4
+[1,2,3,4,5]
+5
+*/
