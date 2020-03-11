@@ -9,12 +9,12 @@
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        
+        /*Approach : Two pointers search algorithm.*/
         ListNode *ptr1 = head, *ptr2 = head;
         int nodeCount = 0; 
         while(ptr2){
             ptr2 = ptr2->next;
-            if(nodeCount > n){
+            if(nodeCount > n){ // First advance the first pointer by n nodes.
                 ptr1 = ptr1->next;
             }
             nodeCount++;
@@ -25,6 +25,8 @@ public:
         
     }
 };
+
+/*Complexity Analysis: O(n) time as we need to traverse all link nodes at least once and O(1) space, as we did not use any extra space. */
 
 /*
 [1,2,3,4,5]
