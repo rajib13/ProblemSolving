@@ -14,12 +14,12 @@ public:
         int nodeCount = 0; 
         while(ptr2){
             ptr2 = ptr2->next;
-            if(nodeCount > n){ // First advance the first pointer by n nodes.
+            if(nodeCount > n){ // First, advance the first pointer by n nodes.
                 ptr1 = ptr1->next;
             }
             nodeCount++;
         }
-        if(n == nodeCount) return head->next;
+        if(n == nodeCount) return head->next; // Edge case, if the first node needs to be deleted.
         ptr1->next = ptr1->next->next;
         return head; 
         
