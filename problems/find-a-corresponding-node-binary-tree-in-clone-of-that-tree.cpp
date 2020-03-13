@@ -11,8 +11,11 @@
 class Solution {
 public:
     TreeNode* getTargetCopy(TreeNode* root1, TreeNode* root2, TreeNode* target) {
-    
-        /*Apporach: Traverse the both trees at the same time. */
+        // root1 is the root of original tree and the root2 represents the root of the cloned tree.
+        
+        /*Apporach: In-order traverse the both trees at the same time, and push root1 to the stack 
+            first and then the root2. Once we got the target node as same as root1 node, we can 
+            return the root2 as reference.*/
         stack<TreeNode*> nodes;
         while(!nodes.empty() || root1 != nullptr){
             while(root1 != nullptr){
@@ -32,3 +35,6 @@ public:
         return nullptr;
     }
 };
+
+/*Complexity: My algorithm runs in O(n) time, as we need to traverse the whole tree to find the target. 
+O(height) space complexity, as at the worst case we need to store the height of the tree into the stack. */
