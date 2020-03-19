@@ -1,6 +1,6 @@
 class Solution {
     public boolean isPalindrome(String s, int count, int p1, int p2){
-        /*Approach : For any mismatch, we should delete either p1 or p2. As a result we get two substrings and 
+        /*Idea : For any mismatch, we should delete either p1 or p2. As a result we get two substrings and 
         it is enough to check whether either of these is palindrom or not. MOMENT OF PROUD.*/
         
         while(p1 < p2){
