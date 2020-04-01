@@ -17,7 +17,7 @@ public:
         ListNode* nodeBeforeStart = nullptr; // previous node of startNode
        
         
-        int nodeCount = 0; // To check whethere we reach the position m or n.
+        int nodeCount = 0; // To check whether we reach the position m or n.
         
         while(head){
             nodeCount++;
@@ -49,4 +49,7 @@ public:
         return root;
         
     }
-};
+}; 
+
+
+/**/
