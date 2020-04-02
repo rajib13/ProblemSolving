@@ -20,30 +20,9 @@ public:
 class Solution {
 public:
     int uniquePaths(int row, int col) {
-        //Approach 2:  We don't need 2D vector, two rows are enough to produce the result. We generate the second row from the first one.
+        //Approach 1:  Two rows are enough to produce the result. We generate the second row from the first one.
  
         vector<vector<int>> dp(2, vector<int> (col, 1));
-        
-        for(int r = 1; r < row; r++){
-            for(int c = 1; c < col; c++){
-                dp[1][c] = dp[0][c] + dp[1][c-1];
-            }
-            for(int c = 1; c < col; c++)
-                dp[0][c] = dp[1][c];
-        }
-        
-        return dp[1][col-1];
-        
-    }
-};
-
-/*
-class Solution {
-public:
-    int uniquePaths(int row, int col) {
-        vector<vector<int>> dp(2, vector<int> (col, 1)); 
-        
-        //Approach 1: using two rows of dp vector. And update first row after completing every row operation. 
         
         for(int r = 1; r < row; r++){
             for(int c = 1; c < col; c++){
