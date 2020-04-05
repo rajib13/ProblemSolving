@@ -15,3 +15,10 @@ public:
         return grid[row-1][col-1];
     }
 };
+
+/*
+Complexity Analysis:
+Time: O(mn), as we need to scan all elements of the given grid. 
+Space: O(1), as we do not use any extra space.
+
+*/
