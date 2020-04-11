@@ -9,21 +9,26 @@
  **/
 class Solution {
 public:
-    int ans = INT_MIN;
     int maxx = 0;
-    int helper(TreeNode* root){
+    int dfs(TreeNode* root){
         if(root == nullptr) return 0;
-        int left = helper(root->left);
-        int right = helper(root->right); 
+        int left = dfs(root->left);
+        int right = dfs(root->right); 
         maxx = max(maxx, left + right);
         return max(left, right) + 1; 
     }
     int diameterOfBinaryTree(TreeNode* root) {
         
         if(root == nullptr) return 0;
-        helper(root);
+        dfs(root);
         
         return maxx;
         
     }
 };
+
+/*
+Complexity:
+Time: O(n), where n is the node number in the given tree.
+Space: O(log n), the stack space.
+*/
