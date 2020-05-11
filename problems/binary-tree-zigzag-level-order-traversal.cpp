@@ -15,25 +15,30 @@ public:
         vector<vector<int>> ret;
         if(root == NULL) return ret; 
         
-        vector<int> levelNodes;
         queue<TreeNode*> nodes;
-        
         nodes.push(root);
-        int level = 0; 
+        bool direction = true; // True means left to right, False otherwise. 
+        
         while(!nodes.empty()){
             int qSize = nodes.size();
+            vector<int> levelNodes(qSize);
             
-            for(int i = 0; i<qSize; i++){
+            for(int i = 0; i < qSize; i++){
                 TreeNode* root = nodes.front(); nodes.pop();
-                levelNodes.push_back(root->val);
+                int index = direction ? i : (qSize - 1 - i);
+                
+                levelNodes[index] = root->val;
                 if(root->left) nodes.push(root->left);
                 if(root->right) nodes.push(root->right);
             }
-            if(level % 2) reverse(levelNodes.begin(), levelNodes.end());
             ret.push_back(levelNodes);
-            levelNodes.clear();
-            level++;
+            direction = !direction; 
         }
     return ret;         
     }
 };
+
+
+/*Complexity Analysis: 
+Time: O(n), as we need to scan all nodes.
+Space: O(L), where L is the highest nodes in a level. O(n) for full binary tree. */
