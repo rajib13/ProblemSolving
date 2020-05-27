@@ -16,3 +16,9 @@ public:
         return ret;
     }
 };
+
+/*
+Complexity Analysis: 
+Time: O(nk logk), where n is the total number of strings of the given array, and k is the max length of a string.
+Space: O(nk), as we need to store strings in the map
+*/
