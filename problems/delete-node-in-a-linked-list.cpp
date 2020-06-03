@@ -15,3 +15,9 @@ public:
         
     }
 };
+
+/*
+Complexity Analysis:
+Time: O(1), as we only need to know the given node.
+Space: O(1), as we do not need to store anything.
+*/
