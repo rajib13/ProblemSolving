@@ -14,3 +14,11 @@ public:
         return (biggest-1)*(secondBiggest-1);
     }
 };
+
+
+/*
+Complexity Analysis:
+Time: O(n), as we need to scan all elements once. 
+Space: O(1), since we do not extra space.
+
+*/
