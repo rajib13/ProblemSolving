@@ -13,7 +13,12 @@ public:
         
     }
 };
+/*
+Complexity Analysis:
+Time: O(mn) where m is the row and n is the column.
+Space: O(n), since we store only previous column.
 
+*/
 
 
 /*
