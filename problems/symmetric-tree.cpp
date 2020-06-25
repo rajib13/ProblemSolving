@@ -33,4 +33,10 @@ public:
         
         return true; 
     }
+
+
+/*Complexity analysis:
+Time: O(n), as wee need to scan all nodes.
+Space: O(h), where h is the height of the tree.
+*/
 };
