@@ -17,7 +17,7 @@ public:
         while(!nodes.empty() or root != NULL){
             while(root != NULL){
                 nodes.push(root);
-                if(root1 == NULL) return false; // In a assymmetric tree, right side could be invalid. 
+                if(root1 == NULL) return false; // In a assymmetric tree, right side could not be invalid. 
                 nodes.push(root1);
                 
                 root = root->left; // We are traversing root to leftmost node.
@@ -33,10 +33,10 @@ public:
         
         return true; 
     }
+};
 
 
 /*Complexity analysis:
-Time: O(n), as wee need to scan all nodes.
+Time: O(n), where n is the number of nodes.
 Space: O(h), where h is the height of the tree.
 */
-};
