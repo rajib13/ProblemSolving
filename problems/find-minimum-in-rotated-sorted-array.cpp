@@ -5,8 +5,6 @@ public:
         int high = nums.size() - 1; 
         int minn = INT_MAX;
         
-        // Approach 1 : Similar as number 33. Search in rotated sorted array. 
-        
         while(low <= high){
             int mid = low + (high-low)/2;
             minn = min (minn, nums[mid]); 
@@ -22,4 +20,7 @@ public:
     }
 };
 
-/**/
+/*Complexity Analysis:
+Time: O(log n), where n is the number of elements in the givn array.
+Space: O(1), since we did  not any extra space.
+*/
