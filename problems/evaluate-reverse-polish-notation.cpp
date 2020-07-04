@@ -6,9 +6,9 @@ public:
         
         for(string token : tokens){
             
-            if(token.size()  > 1  or isdigit(token[0])) numbers.push(stoi(token));
-            
-            else{
+            if(token.size()  > 1  or isdigit(token[0])){
+			numbers.push(stoi(token));
+            } else {
                 int oprnd1 = numbers.top(); numbers.pop();
                 int oprnd2 = numbers.top(); numbers.pop();
                 if("+" == token) numbers.push(oprnd1 + oprnd2);
