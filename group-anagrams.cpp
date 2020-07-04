@@ -18,6 +18,6 @@ public:
 
 /*
 Complexity analysis:
-Time: O(m*nlogn), where m is the total number of words, n is the length of longest word.
-Space: O(m), as we need to store them in a hashmap.
+Time: O(m*nlogn), where m is the total number of words, and n is the length of the longest word.
+Space: O(m), as we need to store the words in a hashmap.
 */
