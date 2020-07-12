@@ -22,3 +22,8 @@ public:
         return ret;
     }
 };
+
+/*Complexity analysis:
+Time: O(n^2 logn), to find out all subarrays the algorithm requires O(n^2) time, and then we need to sort the new array of n^2 elements.
+Space: O(n^2), as we need to store n*(n+1)/2 elements
+*/
