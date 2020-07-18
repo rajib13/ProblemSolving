@@ -20,7 +20,7 @@ public:
         string word;
         string year = "";
         string month = "";
-        int d;
+        int d; 
         int i = 0;
         string date = "";
         while(ss >> word){
