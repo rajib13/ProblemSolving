@@ -16,6 +16,6 @@ vector<int> moveZerosToEnd(const vector<int>& arr)
 
 /*
 Complexity analysis:
-Time: O(n),
-Space: O(1), since we did not use any extra space
+Time: O(n), as we only traverse the whole array once.
+Space: O(1), since we did not use any extra space through the entire program.
 */
