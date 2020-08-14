@@ -1,0 +1,17 @@
+int minCost = INT_MAX;
+
+void dfs(Node* root, int val){ // 4, 5
+  if(root->children.size() == 0){ // 5,3,6
+    minCost = min (minCost, val + root->cost); // INT_MAX, 4+5, 
+  }
+  
+  for(int i = 0; i < root->children.size(); i++){ // 1(4)
+    dfs(root->children[i], val + root->cost); // 4, 5
+  }
+}
+
+/*
+Complexity analysis:
+Time: O(n), if the given tree full binary tree then the time would be O(log n), and in the worst case if the tree is left or right skewed tree then it would be O(n).
+Space: O(n), the recursion stack space, reason as same as the time complexity.
+*/
