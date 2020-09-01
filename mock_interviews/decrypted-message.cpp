@@ -23,6 +23,6 @@ string decrypt( const string& word )
 
 /*
 Complexity analysis:
-Time: O(n), we need to scan all chars once
+Time: O(n), as we need to scan all chars once
 Space: O(1), since we did not use any extra space throughout the entire program.
 */
