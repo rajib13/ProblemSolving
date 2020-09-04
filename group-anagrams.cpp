@@ -15,7 +15,7 @@ public:
         return ret;
     }
 };
-
+ 
 /*
 Complexity analysis:
 Time: O(m*nlogn), where m is the total number of words, and n is the length of the longest word.
