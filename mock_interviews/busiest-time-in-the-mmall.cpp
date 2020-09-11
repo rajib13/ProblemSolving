@@ -28,9 +28,9 @@ int findBusiestPeriod( const vector<vector<int> >& data)
    return busiestTime;
 }
 
-/* Complexity analysis
-  Time: O(n), we need to scan all timestamp  once. 
+/* 
+  Complexity analysis
+  Time: O(n), as we need to scan all timestamps once. 
   Space: O(1), since we do not use any extra space throughout the entire program.
-                 
 */
 
