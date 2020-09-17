@@ -20,9 +20,8 @@ bool validateIP(const string& ip)
 }
 
 /*
-Complexity Analysis:
- Time : O(n) , where n is the ip length
- Space: O(1), since we do not use any extra space.
-
+   Complexity Analysis:
+   Time : O(n), where n is the ip length
+   Space: O(1), since we do not use any extra space.
 */
 
