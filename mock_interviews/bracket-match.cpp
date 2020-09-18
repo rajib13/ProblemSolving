@@ -16,5 +16,5 @@ int bracketMatch( const string& text )
 
 /* Complexity analysis:
  Time: O(n), as we need to scan all character of the given string once.
- Space: O(1), since we do not use any extra space.
+ Space: O(1), since we do not use any extra space throughout the entire program.
 */
