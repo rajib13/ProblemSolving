@@ -2,8 +2,7 @@ vector<int> meetingPlanner( const vector<vector<int>>& slotsA, const vector<vect
 {
    int slotsASize = slotsA.size();
    int slotsBSize = slotsB.size();
-   int p1 = 0; // 1
-   int p2 = 0; // 1
+   int p1 = 0,  p2 = 0; 
   
    while(p1 < slotsASize && p2 < slotsBSize){
      
