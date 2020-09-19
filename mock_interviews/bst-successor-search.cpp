@@ -1,15 +1,15 @@
 Node* findInOrderSuccessor( Node *inputNode )
 {
-    if(inputNode == nullptr)return nullptr; // 
+    if(inputNode == nullptr)return nullptr; 
   
-    if(inputNode->right){ // !right
+    if(inputNode->right){ 
       inputNode = inputNode->right;
       while(inputNode->left)
         inputNode = inputNode->left;
       return inputNode;
-    } else { // 
-      while(inputNode->parent != nullptr && inputNode->parent->key < inputNode->key) // inputNode = 20, parent = nullptr
-        inputNode = inputNode->parent; // 
+    } else { 
+      while(inputNode->parent != nullptr && inputNode->parent->key < inputNode->key) 
+        inputNode = inputNode->parent; 
       return inputNode->parent; 
     }
   return nullptr;
