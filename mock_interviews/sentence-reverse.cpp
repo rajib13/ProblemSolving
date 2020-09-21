@@ -8,11 +8,10 @@ vector<char> reverseWords( const vector<char>& arr )
           if(wordStart == 0) ret.push_back(' ');
         else{
           for(int j = i+1; j < wordStart; j++)
-            ret.push_back(arr[j]); // practice 
+            ret.push_back(arr[j]);
           ret.push_back(' '); 
           wordStart = 0;
         }
-        
       }
     }  
     if(wordStart > 0){
@@ -25,6 +24,6 @@ vector<char> reverseWords( const vector<char>& arr )
 
 /*
 Complexity Analysis:
-Time: O(n), we traversed the whole sentence twice.
+Time: O(n), as we traversed the whole sentence twice.
 Space: O(1), since we did not use any extra space.
 */
