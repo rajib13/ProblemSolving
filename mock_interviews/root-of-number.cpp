@@ -23,5 +23,5 @@ double root(double x, unsigned int n)
 /*
 Complexity analysis:
 Time: O(log (xn)), where log(x) is for using the pow functoin and O(logn) for the binary search.
-Space: O(1), Since we did not use any extra space throughut the entire program.
+Space: O(1), since we did not use any extra space throughut the entire program.
 */
