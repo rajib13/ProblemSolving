@@ -1,7 +1,5 @@
-vector<int> getIndicesOfItemWeights( const vector<int>& arr, int limit)
-{
+vector<int> getIndicesOfItemWeights( const vector<int>& arr, int limit){
   unordered_map<int, int> ump;
-  
   for(int i = 0; i < arr.size(); i++){
     if(ump.find(arr[i]) != ump.end())
       return vector<int>{i, ump[arr[i]]};
