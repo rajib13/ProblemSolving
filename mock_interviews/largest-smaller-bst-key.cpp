@@ -14,5 +14,5 @@
 
 /* Complexity analysis: 
   Time: if the given tree is balanced then O(log n), but in case of left or right skewed BST, it would be O(n).
-  Space: Always O(1), throughout the entire algorithm we did not use any extra space.
+  Space: O(1), throughout the entire algorithm we did not use any extra space.
 */
