@@ -31,9 +31,8 @@ void drawTree(double x, double y, double len, double depth){
   
 }
 
-
 /*
 Complexity analysis:
 Time: O(4^D), where D is the given depth.
-Space:  O(D), recursion stack space.
+Space: O(D), recursion stack space.
 */
