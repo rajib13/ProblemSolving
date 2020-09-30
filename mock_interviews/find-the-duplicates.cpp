@@ -23,6 +23,6 @@ vector<int> findDuplicates( const vector<int>& arr1, const vector<int>& arr2)
 
 /*
 Complexity analysis:
-Time: O(N log M), where N is the size of array 1 and M is for array 2.
+Time: O(N log M), where N is the size of the first array and M is for the second array.
 Space: O(1), since we did not use any extra space throughut the entire program.
 */
