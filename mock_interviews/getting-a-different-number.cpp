@@ -12,8 +12,6 @@ int getDifferentNumber( const vector<int>& nums )
   for(int i = 0 ; i < n; i++)
     if(i != arr[i])
       return i; 
-  // If we are here, that means we have seen all elements up to the  array size.
-  
   return n; 
 }
 
