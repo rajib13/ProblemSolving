@@ -10,7 +10,7 @@ int calcDroneMinEnergy( const vector<vector<int>>& route )
 }
 /*
 Complexity analysis:
-Time: O(n), as we scanned all point in the route once.
+Time: O(n), as we scanned all points in the route once.
 Space: O(1), since we did not use any extra space.
 
 */
