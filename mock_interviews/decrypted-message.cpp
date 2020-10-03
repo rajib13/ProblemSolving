@@ -1,7 +1,6 @@
 int convertToLowerCase(int diff){ 
   while(diff < 97)
     diff += 26; 
-  
   return diff;
 }
 
@@ -23,6 +22,6 @@ string decrypt( const string& word )
 
 /*
 Complexity analysis:
-Time: O(n), as we need to scan all chars once
+Time: O(n), as we need to scan all chars once.
 Space: O(1), since we did not use any extra space throughout the entire program.
 */
