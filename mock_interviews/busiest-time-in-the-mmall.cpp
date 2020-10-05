@@ -4,8 +4,7 @@ int findBusiestPeriod( const vector<vector<int> >& data)
     int currVisitors = 0; 
     int busiestTime = 0;
     int maxVisitors = INT_MIN;
-  
-    
+ 
     for(int i = 0; i < data.size(); i++){
        int timestamp = data[i][0];
        int newVisitors =  data[i][1];
