@@ -12,7 +12,7 @@ double findGrantsCap( vector<int> grantsArray, int newBudget )
       elementCount--;
     }
     else{
-      double ans = (double)newBudget / (double) elementCount;
+      double ans = (double) newBudget / (double) elementCount;
       return ans;
     }
   }
