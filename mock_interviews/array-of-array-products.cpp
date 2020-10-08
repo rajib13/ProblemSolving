@@ -17,7 +17,8 @@ vector<long> arrayOfArrayProducts(const vector<int>& arr)
   return res;
 }
 
-/*Complexity analysis:
-Time: O(n), as we scanned all elements of the given array at least twice.
-Space: O(1), since we did not use any extra space other than the return vector.
+/* 
+  Complexity analysis:
+  Time: O(n), as we scanned all elements of the given array at least twice.
+  Space: O(1), since we did not use any extra space other than the return vector.
 */
