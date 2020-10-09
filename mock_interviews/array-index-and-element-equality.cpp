@@ -21,7 +21,7 @@ int indexEqualsValueSearch(const vector<int> &arr)
 
 
 /*
-Complexity analysis:
-Time : O(logn), at every iteration we discard at least half of the input elements.
-Space: O(1), since in the entire algorithm we did not use any extra space.
+   Complexity analysis:
+   Time : O(logn), at every iteration we discard at least half of the input elements.
+   Space: O(1), since in the entire algorithm we did not use any extra space.
 */
