@@ -19,7 +19,6 @@ int indexEqualsValueSearch(const vector<int> &arr)
    return ans;
 }
 
-
 /*
    Complexity analysis:
    Time : O(logn), at every iteration we discard at least half of the input elements.
