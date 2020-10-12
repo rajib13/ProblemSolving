@@ -26,7 +26,7 @@ public:
 };
 
 /*
-Complexity analysis:
-Time: O(n^2), where n is the row or column size of the given matrix;
-Space: O(n), since we stored the occurances of 1 in any row and column in a vector;
+    Complexity analysis:
+    Time: O(n^2), where n is the row or column size of the given matrix;
+    Space: O(n), since we stored the occurances of 1 in any row and column in a vector;
 */
