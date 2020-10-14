@@ -1,11 +1,11 @@
 class Solution {
 public:
     int minFlips(string t) {
-      int n = t[0] - '0';
+      int count = t[0] - '0';
       for(int i = 1; i< t.size(); i++){
-          if(t[i-1] != t[i]) n++;
+          if(t[i-1] != t[i]) count++;
       }
-        return n;
+        return count;
     }
 };
 
