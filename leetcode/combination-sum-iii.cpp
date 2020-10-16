@@ -10,7 +10,6 @@ public:
             temp.push_back(nums[i]);
             backtrack(res, nums, temp, target, k, i + 1,  sum + nums[i]);
             temp.pop_back();
-            
         }
     }
     vector<vector<int>> combinationSum3(int k, int n) {
