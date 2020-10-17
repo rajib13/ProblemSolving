@@ -15,7 +15,7 @@ public:
     vector<vector<int>> combinationSum3(int k, int n) {
         vector<vector<int>> res;
         vector<int> temp;
-        vector<int> nums{1,2,3,4,5,6,7,8,9};
+        vector<int> nums{1,2,3,4,5,6,7,8,9}; 
         
         backtrack(res, nums, temp, n, k, 0, 0);
         return res;
