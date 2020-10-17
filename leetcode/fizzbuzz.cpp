@@ -23,9 +23,8 @@ public:
     }
 };
 
-
 /*
-Complexity analysis:
-Time: O(n), since we need to iterate through 1 to n.
-Space: O(1), Since we are not using any extra space.
+    Complexity analysis:
+    Time: O(n), as we need to iterate through 1 to n.
+    Space: O(1), since we are not using any extra space.
 */
