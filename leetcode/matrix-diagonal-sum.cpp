@@ -12,6 +12,6 @@ public:
 
 /*
 Complexity analysis:
-Time: O(n), where n is the number of rows in the given square matrix.
-Space: O(1), since we did  not use any extra space.
+    Time: O(n), where n is the number of rows in the given square matrix.
+    Space: O(1), since we did not use any extra space.
 */
