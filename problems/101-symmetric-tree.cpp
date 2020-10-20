@@ -36,7 +36,7 @@ public:
 };
 
 /*
-Complexity analysis:
-Time: O(n), where n is the number of nodes of the given tree.
-Space: O(n). since we need to store the nodes, in worst case (left or right skwed tree) 
+    Complexity analysis:
+    Time: O(n), where n is the number of nodes of the given tree.
+    Space: O(n). since in worst case (left or right skewed tree), we need to store all nodes in the stack.
 */
