@@ -43,10 +43,16 @@ public:
     }
 };
 
+/*
+Complexity analysis:
+Time: O(n), where n is the number of nodes of the given binar tree;
+Space: O(n), in worst case, in full binary tree, we need to store n/2 nodes in the queue.
+*/
+
 
 /*
         
-        //Approach 1: 100% space optimized.
+        //Approach 2: 100% space optimized.
         
         vector<vector<int>> ret;
         if(root == NULL) return ret; // Edge Case;
@@ -87,18 +93,5 @@ public:
         }
         if(levelNodes.size() > 0 ) ret.push_back(levelNodes); // For the leaf nodes, the insertion condition (if expected == count...) would not execute,
         return ret;
-
-*/
-
-/*
-Test Cases: 
-
-[3,9,20,null,null,15,7]
-[]
-[8]
-[2,3]
-[1,2,3,4,5,6,7,8,9]
-[1,2,3,4,5,6,7,8,9,null,null,8,null,null,6]
-[1,null,2,null,3,4,null,5,null,6,7,null]
 
 */
