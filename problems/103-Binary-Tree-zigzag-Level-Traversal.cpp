@@ -11,18 +11,16 @@ class Solution {
 public:
     vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
         
-        
         vector<vector<int>> ret;
-        if(root == NULL) return ret; 
+        if(root == NULL) return ret;
         
-        vector<int> levelNodes;
         queue<TreeNode*> nodes; // for level order traversal we apply BFS on the tree.
         
         nodes.push(root);
         int level = 0; 
         while(!nodes.empty()){
             int qSize = nodes.size();
-            
+            vector<int> levelNodes;
             for(int i = 0; i<qSize; i++){
                 TreeNode* root = nodes.front(); nodes.pop();
                 levelNodes.push_back(root->val);
@@ -31,7 +29,6 @@ public:
             }
             if(level % 2) reverse(levelNodes.begin(), levelNodes.end()); // Finally reversing the order for zigzag. 
             ret.push_back(levelNodes);
-            levelNodes.clear(); // crucial
             level++; // increment of the level
         }
     return ret;         
