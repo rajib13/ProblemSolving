@@ -15,6 +15,12 @@ public:
 };
 
 /*
+    Complexity analysis:
+    Time: O(n), where n is the number of nodes of the given tree.
+    Space: O(n), in worst case, if the given tree is left or skewed tree then we need to store all n nodes in the stack.
+*/
+
+/*
 Note:   if we were asked to find the max depth by counting edges then in base case
         we would return -1. That means when there is no node we should return -1
         because a node without child has no edge, it should return 0 and so if there is no 
