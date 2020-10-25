@@ -13,7 +13,7 @@ public:
 
 
 
-/*
+/*  
 Approach 1: using previous idea of the same problem. 
 class Solution {
 public:
