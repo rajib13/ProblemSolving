@@ -11,7 +11,7 @@ public:
 };
 
 /*
-Complexity analysis:
-Time: O(n), as we need to scan all elements once.
-Space: O(1), since we did not use any extra space.
+    Complexity analysis:
+    Time: O(n), as we need to scan all elements once.
+    Space: O(1), since we did not use any extra space.
 */
