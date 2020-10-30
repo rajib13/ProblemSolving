@@ -12,7 +12,8 @@ public:
     }
 };
 
-/*Complexity analysis:
-Time: O(1), since n could be maximum of 10 digits (INT_MAX)
-Space: O(1)
+/*
+    Complexity analysis:
+    Time: O(1), since n could be maximum of 10 digits (INT_MAX)
+    Space: O(1), as we do not use any extra space throughout the entire program.
 */
