@@ -44,11 +44,10 @@ public:
 };
 
 /*
-Complexity analysis:
-Time: O(n), where n is the number of nodes of the given binar tree;
-Space: O(n), in worst case, in full binary tree, we need to store n/2 nodes in the queue.
+    Complexity analysis:
+    Time: O(n), where n is the number of nodes of the given binar tree;
+    Space: O(n), in worst case, in full binary tree, we need to store n/2 nodes in the queue.
 */
-
 
 /*
         
