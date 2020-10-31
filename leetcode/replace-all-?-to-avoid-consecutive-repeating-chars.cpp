@@ -13,7 +13,7 @@ public:
 };
 
 /*
-Complexity analysis:
-Time:  O(n), as we scan all the chars once.
-Space: O(1), since we did not use any extra space throughout the entire algorithm.
+    Complexity analysis:
+    Time:  O(n), as we scan every char in the given string.
+    Space: O(1), since we do not use any extra space throughout the entire algorithm.
 */
