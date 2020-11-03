@@ -10,7 +10,6 @@
 class Solution {
 public:
     int minDepth(TreeNode* root) {
-        /*Approach 2: Recursion. O(n) runtime, and O(logn) space - DFS*/
         if(root == NULL) return 0;
         if(root->right == NULL) return 1 + minDepth(root->left);
         
@@ -19,11 +18,15 @@ public:
     }
 };
 
+/*
+    Complexity analysis:
+    Time: 0(n), in worst case, if the given tree is a full binary tree, we need to scan all nodes once.
+    Space: O(logn), for the recursion stack space. 
+*/
 
 
 /*
     int minDepth(TreeNode* root) {
-        
         
         // Approach 1: 100% space optimized. O(n) runtime, O(n) space - BFS level order traversal
         
@@ -55,17 +58,5 @@ public:
         }
         return depth; 
     }
-
-*/
-/*
-Test Cases: 
-
-[3,9,20,null,null,15,7]
-[]
-[8]
-[2,3]
-[1,2,3,4,5,6,7,8,9]
-[1,2,3,4,5,6,7,8,9,null,null,8,null,null,6]
-[1,null,2,null,3,4,null,5,null,6,7,null]
 
 */
