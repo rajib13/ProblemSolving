@@ -19,25 +19,9 @@ public:
     }
 };
 
-
 /*
-Approach 1 : Recursion using helper function.
-class Solution {
-public:
-    bool helper(TreeNode* root, int sum){
-        if(root == NULL and sum) return false;
-        
-        if(root == NULL and sum == 0) return true;
-        
-        if(root->left and root->right == NULL) return helper(root->left, sum - root->val) ;
-        else if(root->right and root->left == NULL) return helper(root->right, sum - root->val);
-        else return helper(root->left, sum - root->val) or helper(root->right, sum - root->val);
-    }
-    bool hasPathSum(TreeNode* root, int sum) {
-        if(root == NULL) return false;
-        return helper(root, sum);
-        
-    }
-};
-
+    Complexity analysis: 
+    Time: O(n), in worst case we need to scan all nodes once.
+    Space: O(logn), for the recursion stack space.
 */
+
