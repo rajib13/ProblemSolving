@@ -14,3 +14,9 @@ public:
     }
 };
 
+/*
+    Complexity analysis:
+    Time: O(1), in worst case the while loop will execute 31 times because 2^31 is the integer range. 
+    Space: O(1), since we are not using any extra space.
+*/
+
