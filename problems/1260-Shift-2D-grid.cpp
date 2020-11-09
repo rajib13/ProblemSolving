@@ -20,3 +20,9 @@ public:
         return grid;
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(m.n.k), where 'm','n' and 'k' are the rows, columns, and the number of shift of the given matrix respectively.
+    Space: O(1), since we did not use any extra spacethroughout the entire program.
+*/
