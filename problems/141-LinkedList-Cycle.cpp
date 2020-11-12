@@ -20,3 +20,8 @@ public:
         return false; // In all other cases.
     }
 };
+/*
+    Complexity analysis: 
+    Time: 0(n), where n is the number of nodes in the given linked list.
+    Space: O(1), since we did not use any extra space.
+*/
