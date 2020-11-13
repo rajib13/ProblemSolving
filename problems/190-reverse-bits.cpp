@@ -8,7 +8,6 @@ public:
         }
         uint32_t decimal = bitset<32> (binary).to_ulong();
         return decimal;
-        
     }
 };
 
