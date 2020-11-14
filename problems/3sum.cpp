@@ -6,7 +6,7 @@ public:
         sort(nums.begin(), nums.end());
         
         for (int i = 0 ; i < nums.size() - 2; i++){
-            if(nums[i] > 0) break; // as we sorted the array, so if a==nums[i]==0 then always a+b+c > 0
+            if(nums[i] > 0) break; // as we sorted the array, so if a == nums[i] == 0 then always a+b+c > 0
             if(i > 0 and nums[i] == nums[i-1]) continue; // We already checked for this a. 
             int left = i + 1;
             int right = nums.size() - 1; 
@@ -23,10 +23,14 @@ public:
                 else if(sum > 0) right--;
                 else left++;
             }
-            
-            
         }
         return ret;
-        
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(n^2), where n is the number of elements in the given array.
+    Space: O(logn), for the built-in sort space.
+
+*/
