@@ -21,3 +21,8 @@ public:
         return overlap;
     }
 };
+/*
+    Complexity analysis: 
+    Time: O(nlogn), where n is the number of the given intervals.
+    Space: O(1), since we did not use any extra space.
+*/
