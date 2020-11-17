@@ -2,11 +2,9 @@ class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
         vector<vector<int>> overlap;
-    
         if(intervals.size() == 0) return overlap;
         
         sort(intervals.begin(), intervals.end());
-        
         int start = intervals[0][0];
         int end = intervals[0][1];
         for(int i = 1; i < intervals.size(); i++){
