@@ -11,6 +11,12 @@ public:
 };
 
 /*
+    Complexity analysis:    
+    Time: O(n), where n is the number of elements in the given array.
+    Space: O(1), since we did not use any extra space.
+*/
+
+/*
 Approach 2: 
 int removeDuplicates(int* nums, int numsSize){
     int prev = -100, count = 0, occur = 0;
