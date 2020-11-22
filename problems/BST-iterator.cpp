@@ -36,6 +36,12 @@ public:
     }
 };
 
+/*
+    Complexity analysis:
+    Time: O(n), where n is the number of nodes in the given BST.
+    Space: O(h), we store the height of nodes in the stack.  
+   */
+
 /**
  * Your BSTIterator object will be instantiated and called as such:
  * BSTIterator* obj = new BSTIterator(root);
