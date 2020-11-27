@@ -1,12 +1,6 @@
 /*
     Assignment of Kepler Communications.
-    Rajib Das
-    rajib.das@uleth.ca
-    437 982 4104
-
-    PS: For detailed comments, please see the documentation.
 */
-
 
 #include<iostream>
 #include<vector>
