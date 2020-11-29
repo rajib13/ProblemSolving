@@ -4,8 +4,8 @@ public:
     int limit = 0;
     KthLargest(int k, vector<int>& nums) {
         limit = k;
-        for(int i = 0; i  < nums.size(); i++){
-            minHeap.push(nums[i]);
+        for(int num : nums){
+            minHeap.push(num);
             if(minHeap.size() > limit) minHeap.pop();
         }
     }
@@ -16,6 +16,12 @@ public:
         return minHeap.top();
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(logk), where k is the number elements in the min-heap.
+    Space: O(k), as we store at most k elements in the min-heap.
+*/
 
 /**
  * Your KthLargest object will be instantiated and called as such:
