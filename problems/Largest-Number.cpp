@@ -13,9 +13,6 @@ public:
             }
         );
         
-        for(string str : strNums)
-            cout<< str << " ";
-        
         if(strNums[0] == "0") return "0"; // if all the array elements are zero.
         
         string ret = "";
@@ -26,15 +23,8 @@ public:
         return ret;
     }
 };
-
-
-/*Test Cases
-
-[10,2]
-[91,3,30,34,5,55,58,54]
-[1]
-[]
-[1,2,4,8,16,32,64,128,256,512]
-[16,128]
-[16,198]
+/*
+    Complexity analysis:
+    Time: O(n), where n is the number of elements in the given vector.
+    Space: O(n), since we need to store n elements into an auxilary vector of string.
 */
