@@ -31,3 +31,9 @@ public:
         return root->next;
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(max(m,n)), where m and n are the sizes of list1 and list2.
+    Space: O(1), since we did not use any extra space.
+*/
