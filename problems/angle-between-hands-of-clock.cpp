@@ -13,7 +13,6 @@ public:
     }
 };
 
-
 /*
 	Complexity analysis:
 	Time: O(1), as every step of the program takes constant time.
