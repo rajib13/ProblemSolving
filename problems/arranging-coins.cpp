@@ -13,6 +13,12 @@ public:
     }
 };
 
+/*
+    Complexity analysis:
+    Time: O(1), since all operations take constnt amount of time.
+    Space: O(1), as we do not use any extra space.
+*/
+
 
 /*
 class Solution {
@@ -38,6 +44,6 @@ public:
 
 /*
 Complexity analysis:
-Time: O(1)
-Space: O(1)
+Time: O(log n), as in every iteration we discard half of the n.
+Space: O(1), since we do not use any extra space.
 */
