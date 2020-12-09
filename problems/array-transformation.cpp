@@ -1,18 +1,3 @@
-
-/*
-
-1243. Given an initial array arr, every day you produce a new array using the array of the previous day.
-
-On the i-th day, you do the following operations on the array of day i-1 to produce the array of day i:
-
-	1. If an element is smaller than both its left neighbor and its right neighbor, then this element is incremented.
-	2. If an element is bigger than both its left neighbor and its right neighbor, then this element is decremented.
-	3. The first and last elements never change.
-After some days, the array does not change. Return that final array.
-
-*/
-
-
 class Solution {
 public:
     vector<int> transformArray(vector<int>& arr) {
@@ -26,11 +11,16 @@ public:
                
             }
             if(count == 0) break;
-            arr = ret;
+            else arr = ret;
             
         }
-    return ret;
-        
-        
+        return ret;
     }
 };
+
+/*
+	Complexity analysis:
+	Time: O(n^2), since we need to traverse the arry multiple times.
+	Space: O(n), as we need to use an auxilary vector.
+
+*/
