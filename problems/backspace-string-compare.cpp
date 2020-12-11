@@ -47,8 +47,7 @@ public:
 };
 
 /*
-Complexity Analysis:
-Time : O(n), as we need to scan all chars.
-Space : O(1), as we do not use any extra space.
-
+    Complexity Analysis:
+    Time : O(n), as we need to scan all characters at least once.
+    Space : O(1), as we do not use any extra space. 
 */
