@@ -1,11 +1,10 @@
 class Solution {
 public:
     int countBattleships(vector<vector<char>>& board) {
-        
         int row = board.size();
         int col = board[0].size();
-        
         int count = 0;
+        
         for(int r = 0; r < row; r++){
             for(int c = 0; c < col; c++){
                 
@@ -22,28 +21,7 @@ public:
 };
 
 /*
-class Solution {
-public:
-    int countBattleships(vector<vector<char>>& board) {
-        // Approach 1 : with flag variable.
-        int row = board.size();
-        int col = board[0].size();
-        
-        int count = 0;
-        for(int i = 0; i < row; i++){
-            bool flag = true;
-            for(int j = 0; j < col; j++){
-                if(board[i][j] == 'X'){
-                    if((i == 0 and flag == true) or (i > 0 and flag == true and board[i-1][j] != 'X')) {
-                        count++;
-                        flag = false;
-                    }
-                }
-                else flag = true;
-            }
-        }
-        return count;
-        
-    }
-};
+    Complexity analysis:
+    Time: O(mn), where m and n are the row and column of the given board.
+    Space: O(1), since we do not use any extra space throughout the entire program.
 */
