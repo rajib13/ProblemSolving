@@ -43,7 +43,7 @@ public:
 */
 
 /*
-Complexity analysis:
-Time: O(log n), as in every iteration we discard half of the n.
-Space: O(1), since we do not use any extra space.
+    Complexity analysis:
+    Time: O(log n), as in every iteration we discard half of the n.
+    Space: O(1), since we do not use any extra space.
 */
