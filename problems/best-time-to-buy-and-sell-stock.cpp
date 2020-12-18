@@ -12,8 +12,7 @@ public:
                 maxProfit = max(maxProfit, prices[i] - buy);
             }
         }
-        return maxProfit; 
-        
+        return maxProfit;
     }
 };
 
