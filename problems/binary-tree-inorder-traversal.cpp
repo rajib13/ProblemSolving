@@ -51,9 +51,8 @@ public:
     
 */
 
-
 /*
     Complexity analysis:
     Time: 0(n), as we need to traverse the whole given tree of `n` nodes.
-    Space: O(n), since we need to store the `height of the tree` into the stack. In the worst case (left or right skewed tree) the height could be of all `n` nodes;
+    Space: O(n), since we need to store the `height of the tree` into the stack. In the worst case, (left or right skewed tree) the height could be of all `n` nodes;
 */
