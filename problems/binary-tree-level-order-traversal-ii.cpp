@@ -31,9 +31,8 @@ public:
         return ret;
     }
 };
-
-
-/* Complexity analysis: 
-Time: O(n), where n is the total number of nodes in the given tree.
-Space: O(n), if it is full binary tree, then at last level there will be n/2 nodes.
+/*      
+    Complexity analysis: 
+    Time: O(n), where n is the total number of nodes in the given tree.
+    Space: O(n), in case of full binary tree, we need to store n/2 nodes into the queue.
 */
