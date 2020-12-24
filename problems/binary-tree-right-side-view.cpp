@@ -10,25 +10,19 @@
 class Solution {
 public:
     vector<int> rightSideView(TreeNode* root) {
-        
         vector<int> ret;
         if(root == NULL) return ret; // Edge Case;
 
         queue<TreeNode*> nodes; // Queue for BFS
-        nodes.push(root); // Push root to the queue so that while loop works.
+        nodes.push(root);
         
         while(!nodes.empty()){
-            
             int qSize = nodes.size(); 
-            
             for(int i =0 ; i < qSize; i++){
-            
                 root = nodes.front(); nodes.pop();
-
                 if(root->left){
                     nodes.push(root->left);
                 } 
-
                 if(root->right){
                     nodes.push(root->right);
                 } 
@@ -36,13 +30,11 @@ public:
             }
         }
         return ret;
-        
     }
 };
 
 /*
-[1,2,3,6,5,6,4]
-[1,null,2,null,3,null,5]
-[1,2,null,3,null,5]
-[1,2,3,6,5]
+    Complexity analysis:
+    Time: O(n), where n is the number of nodes in the tree.
+    Space: O(n), in worst case (full binary tree) we need to store at most n/2 nodes in the queue.
 */
