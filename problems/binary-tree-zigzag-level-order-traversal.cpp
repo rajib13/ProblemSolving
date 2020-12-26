@@ -39,6 +39,6 @@ public:
 
 /*
     Complexity Analysis: 
-    Time: O(n), as we need to scan all nodes.
-    Space: O(L), where L is the highest nodes in a level. O(n) for full binary tree. 
+    Time: O(n), where n is the number of nodes in the given tree, and we need to scan all nodes.
+    Space: O(n), since in worst case the given tree could be a full binary tree. 
 */
