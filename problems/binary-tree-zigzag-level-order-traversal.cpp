@@ -10,8 +10,7 @@
 class Solution {
 public:
     vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
-        
-        
+
         vector<vector<int>> ret;
         if(root == NULL) return ret; 
         
@@ -38,7 +37,8 @@ public:
     }
 };
 
-
-/*Complexity Analysis: 
-Time: O(n), as we need to scan all nodes.
-Space: O(L), where L is the highest nodes in a level. O(n) for full binary tree. */
+/*
+    Complexity Analysis: 
+    Time: O(n), as we need to scan all nodes.
+    Space: O(L), where L is the highest nodes in a level. O(n) for full binary tree. 
+*/
