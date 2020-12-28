@@ -13,8 +13,8 @@ public:
 };
 
 /*
-Complexity Analysis:
-Time: O(n), as we need to scan all chars (in worst case) of the given sentence.
-Space: O(1), as we do not use any extra space. 
+    Complexity Analysis:
+    Time: O(n), as we need to scan all chars (in worst case) of the given sentence.
+    Space: O(1), as we do not use any extra space. 
 
 */
