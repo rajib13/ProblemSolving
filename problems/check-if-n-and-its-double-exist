@@ -8,9 +8,15 @@ public:
             if(set.find(val) != set.end()) return true;
             else {
                 set.insert(val * 2.0);
-                set.insert(val /2.0);
+                set.insert(val / 2.0);
             }
         }
         return false;
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(n), where n is the size of the given array, as we need to scan all elements of the array.
+    Space: O(n), since we are stroing the double and half of every element of the array.
+*/
