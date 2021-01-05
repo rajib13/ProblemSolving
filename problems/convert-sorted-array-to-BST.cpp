@@ -21,3 +21,8 @@ public:
      return sortedArrayToBSTHelper(nums, 0, nums.size()-1);
     }
 };
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is the length of the given array, as we need to scan all elements of the array to put on the BST.
+    Space: O(h), where `h` is the height of the given tree that we need to store in the stack space;
+*/
