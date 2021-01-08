@@ -1,29 +1,25 @@
 class Solution {
 public:
     int countElements(vector<int>& arr) {
-        
         unordered_map<int, int> freq;
         int ret = 0;
         for(int num : arr){
-            if(freq.count(num+1)) ret++; // general case
-            if (!freq.count(num) and freq.count(num-1)) ret += freq[num-1]; // if num presents, then we counted num-1. 
+            if(freq.count(num + 1)) ret++; // general case
+            if (!freq.count(num) and freq.count(num - 1)) ret += freq[num - 1]; // if num presents, then we count the frequncey of [num - 1]. 
             freq[num]++; // always add the num into the map.
         }
-        
         return ret;
-        
     }
 };
 
 /*
     Complexity Analysis:
-    Time: O(n), as we need to go through all of the elements of the given array.
-    Space: O(n), as we need to store all elements into the map.
+    Time: O(n), wheree `n` is the length of the given array, as we need to scan every element of the array.
+    Space: O(n), as we store all elements into the map.
 */
 
 
 /*
-
 Approach : Two pass solution.
 
 class Solution {
