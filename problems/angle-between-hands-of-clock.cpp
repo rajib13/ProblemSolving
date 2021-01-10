@@ -1,7 +1,7 @@
 class Solution {
 public:
     double angleClock(int hr, int m) {
-        // Idea: For every hour the covered angle is 30 and for every minute that is 6. 
+        // Idea: For every hour (resp. minute) the covered angle is 30 (resp. 6) degree;
         double ret; 
 	// Angle covered by hour (hour hand plus for the minutes hand)
         double hrAngle = (double) (hr % 12) * 30 + (double) m/60 * 30;
@@ -12,7 +12,6 @@ public:
         return min(ret, 360-ret);
     }
 };
-
 /*
 	Complexity analysis:
 	Time: O(1), as every step of the program takes constant time.
