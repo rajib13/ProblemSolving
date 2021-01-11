@@ -12,10 +12,9 @@ public:
         return sqrt(2 * (long) n + 0.25) - 0.5;
     }
 };
-
 /*
     Complexity analysis:
-    Time: O(1), since all operations take constnt amount of time.
+    Time: O(logn), the time complexity of the `sqrt` function.
     Space: O(1), as we do not use any extra space.
 */
 
@@ -41,7 +40,6 @@ public:
     }
 };
 */
-
 /*
     Complexity analysis:
     Time: O(log n), as in every iteration we discard half of the n.
