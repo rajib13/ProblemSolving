@@ -1,8 +1,8 @@
 class Solution {
 public:
     int countBattleships(vector<vector<char>>& board) {
-        int row = board.size();
-        int col = board[0].size();
+        int rows = board.size();
+        int cols = board[0].size();
         int count = 0;
         
         for(int r = 0; r < row; r++){
@@ -18,9 +18,8 @@ public:
         return count;
     }
 };
-
 /*
     Complexity analysis:
-    Time: O(mn), where m and n are the row and column of the given board.
+    Time: O(mn), where 'm' and 'n' are the row and column of the given board, respectively.
     Space: O(1), since we do not use any extra space throughout the entire program.
 */
