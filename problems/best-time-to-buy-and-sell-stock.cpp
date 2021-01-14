@@ -8,9 +8,8 @@ public:
             if(prices[i] < buy){
                 buy = prices[i];
             }
-            else{
-                maxProfit = max(maxProfit, prices[i] - buy);
-            }
+            maxProfit = max(maxProfit, prices[i] - buy);
+            
         }
         return maxProfit;
     }
@@ -18,6 +17,6 @@ public:
 
 /*
     Complexity Analysis:
-    Time: O(n), where 'n' is the number of elements of the given array.
+    Time: O(n), where 'n' is the number of elements in the given array.
     Space: O(1), as we do not use any extra space.
 */
