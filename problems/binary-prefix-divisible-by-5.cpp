@@ -5,8 +5,8 @@ public:
         int dec = 0;
         for(int i = 0 ; i < A.size(); i++){
             dec = (dec * 2 + A[i]) % 5;
-            if(dec == 0) ret.push_back(true);
-            else ret.push_back(false);
+            bool toPush = dec == 0 ? true : false;
+            ret.push_back(toPush);
         }
         return ret;
     }
