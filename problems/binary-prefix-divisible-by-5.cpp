@@ -11,7 +11,6 @@ public:
         return ret;
     }
 };
-
 /*
     Complexity analysis:
     Time: O(n), as we need to scan all elements in the given array.
