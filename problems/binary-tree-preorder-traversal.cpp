@@ -32,7 +32,6 @@ public:
     }
 };
 
-
 /*
 Approach 2: recursive solution
     
@@ -44,11 +43,9 @@ Approach 2: recursive solution
         if(root->right) preorderTraversal(root->right); 
         
         return preorder;
-        
     }
 
 */
-
 
 /*
     Complexity analysis:
