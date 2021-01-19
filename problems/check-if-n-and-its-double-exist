@@ -1,15 +1,13 @@
 class Solution {
 public:
     bool checkIfExist(vector<int>& arr) {
-        /* Idea: For every element of array we will insert its double and half. Once we found an element in set we are done. */
+        /* Idea: For every element of the array we will insert the double and half of the number. Once we found an element in set we are done. */
         unordered_set<double> set;
         for(int num : arr){
-            double val = double(num); // 3/2 == 1 (int), also 2/2 = 1 so to make sure we are inserting right element into the set.
+            double val = double (num); // 3/2 == 1 (int), also 2/2 = 1 so to make sure we are inserting right element into the set.
             if(set.find(val) != set.end()) return true;
-            else {
-                set.insert(val * 2.0);
-                set.insert(val / 2.0);
-            }
+            set.insert(val * 2.0);
+            set.insert(val / 2.0);
         }
         return false;
     }
@@ -17,6 +15,6 @@ public:
 
 /*
     Complexity analysis:
-    Time: O(n), where n is the size of the given array, as we need to scan all elements of the array.
-    Space: O(n), since we are stroing the double and half of every element of the array.
+    Time: O(n), where `n` is the size of the given array, as we need to scan all elements of the array.
+    Space: O(n), since we are stroing the double and half of every element of the array into a set.
 */
