@@ -20,12 +20,11 @@ public:
 
 
 /*
-Approach : Two pass solution.
+Approach : Two pass solution with O(n) time and O(n) space complexities;
 
 class Solution {
 public:
     int countElements(vector<int>& arr) {
-        
         vector<int> freq(1001, 0);
         int maxx = 0;
         int ret = 0; 
@@ -41,4 +40,5 @@ public:
         return ret;
         
     }
-};*/
+};
+*/
