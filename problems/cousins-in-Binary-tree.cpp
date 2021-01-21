@@ -12,7 +12,6 @@
 class Solution {
 public:
     bool isCousins(TreeNode* root, int x, int y) {
-        
         queue<TreeNode*> nodes;
         nodes.push(root);
         
@@ -42,9 +41,8 @@ public:
     }
 };
 
-
-
 /*
-Complexity: 
-Time : O(n), where n is the total number of nodes in the given tree.
-Space : O(n), because in a full binary tree, no. of leaf nodes = n/2 (where n is total no of nodes).*/
+    Complexity analysis:
+    Time : O(n), where n is the total number of nodes in the given tree.
+    Space : O(n), because in a full binary tree, number of leaf nodes = n/2.
+*/
