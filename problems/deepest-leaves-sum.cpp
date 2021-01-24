@@ -27,7 +27,6 @@ public:
             }
         }
         return levelSum;
-        
     }
 };
 
