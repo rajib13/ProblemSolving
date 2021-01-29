@@ -10,10 +10,10 @@ public:
             m1 = m2; 
                
         }
-    return true;
-        
+        return true;
     }
 };
+
 /*
     Complexity Analysis:
     Time: O(n), where n is the size of the given cordinates, as we need to scan every coordinate;
