@@ -6,10 +6,8 @@ public:
         
         for(int i = 2; i <= n; i++){
             int third = first + second;
-            
             first = second;
             second = third;
-            
         }
         return first + second; 
     }
