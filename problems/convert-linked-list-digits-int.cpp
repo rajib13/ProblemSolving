@@ -17,6 +17,7 @@ public:
         return ret; 
     }
 };
+
 /*
     Complexity analysis:   
     Time: O(n), where `n` is the total number of nodes in the given linked list, as we need to scan every node of the list;
