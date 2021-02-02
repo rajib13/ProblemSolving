@@ -15,12 +15,14 @@ public:
             TreeNode* root = new TreeNode(nums[mid]);
             root->left = sortedArrayToBSTHelper(nums, start, mid - 1);
             root->right = sortedArrayToBSTHelper(nums, mid+1, end);
+        
         return root; 
     }
     TreeNode* sortedArrayToBST(vector<int>& nums) {
      return sortedArrayToBSTHelper(nums, 0, nums.size()-1);
     }
 };
+
 /*
     Complexity analysis:
     Time: O(n), where `n` is the length of the given array, as we need to scan all elements of the array to put on the BST.
