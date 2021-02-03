@@ -42,19 +42,7 @@ public:
 };
 
 /*
-[5,3,6,2,4,null,7]
-5
-[5,3,6,2,4,null,7]
-7
-[5,3,6,2,4,null,7]
-4
-[1,null,2,null,3,null,5]
-1
-[10,9,null,8,null,7,null,5]
-9
-[0]
-0
-[]
-9
-
+    Complexity analysis:
+    Time: O(h), where h is the height of the tree, in worst case if the key to delete is the deepest node of (left or right skewed tree), then h will be equal to the total number of nodes.
+    Space: o(1), since we did not use any extra space
 */
