@@ -20,3 +20,9 @@ public:
         return root;
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is the number of nodes in the given tree.
+    Space: O(h), where `h` is the height of the tree that will be in the stack call space, in worst case (left or right skewed tree) the height could be O(n).  
+*/
