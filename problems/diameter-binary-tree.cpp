@@ -28,7 +28,7 @@ public:
 };
 
 /*
-Complexity:
-Time: O(n), where n is the node number in the given tree.
-Space: O(log n), the stack space.
+    Complexity:
+    Time: O(n), where n is the node number in the given tree.
+    Space: O(log n), the stack space.
 */
