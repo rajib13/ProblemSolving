@@ -10,20 +10,8 @@ public:
     }
 };
 
-/*Approach 1 : O(n) time and O(n) space complexity.
-
-    class Solution {
-    public:
-        int findSpecialInteger(vector<int>& arr) {
-            int sz = arr.size();
-            vector<int> f(100001,0);
-
-            for(int i = 0; i < sz; i++){
-                f[arr[i]]++;
-                if(f[arr[i]] > sz/4) return arr[i];
-            }
-            return arr[sz - 1];
-        }
-    };
-
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is the length of the given array, since we need to scan 74% of elements in worst case.
+    Space: O(1), as we do not use any extra space.
 */
