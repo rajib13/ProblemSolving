@@ -1,11 +1,9 @@
 class Solution {
 public:
     int evalRPN(vector<string>& tokens) {
-        
         stack<int> numbers;
         
         for(string token : tokens){
-            
             if(token.size()  > 1  or isdigit(token[0])){
 			numbers.push(stoi(token));
             } else {
@@ -22,7 +20,7 @@ public:
 };
 
 /*
-Complexity analysis:
-Time: O(n), as we need to scan all tokens.
-Space: O(n), since we store the numbers in the stack.
+	Complexity analysis:
+	Time: O(n), as we need to scan all tokens.
+	Space: O(n), since we store the numbers in the stack.
 */
