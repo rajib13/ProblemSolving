@@ -21,9 +21,7 @@ public:
     /*Approach 2: Binary search*/
     vector<int> searchRange(vector<int>& nums, int target) {
         vector<int> ret={-1, -1};
-        
         int startTarget = binSearch(nums, target, true);
-        
         if(startTarget == nums.size() || nums[startTarget] != target){
             return ret;
         }
@@ -31,31 +29,14 @@ public:
             ret[0] = startTarget;
             ret[1] = binSearch(nums, target, false) - 1;
         }
-        
-
-        
         return ret;
     }
    
 };
 
-
 /*
-Approach 1: The obvious O(n) solution
-
-    vector<int> searchRange(vector<int>& nums, int target) {
-        vector<int> ret={-1, -1};
-        
-        for(int i=0; i<nums.size(); i++){
-            if(target == nums[i]){
-               if(ret[0] < 0 ){
-                   ret[0] = i;
-                } 
-                ret[1] = i; // edge case: [7] and target =7 should return [0,0] not [0, -1] that is why we update ret[1] every time once we found one. 
-            }
-        }
-        
-        return ret;
-    }
+    Complexity analysis:
+    Time: O(logn), where `n` is the number of elements in the nums.
+    Space: O(1), since we do not use any extra space. 
 
 */
