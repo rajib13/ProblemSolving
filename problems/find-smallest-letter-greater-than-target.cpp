@@ -13,3 +13,9 @@ public:
         return letters[low%length]; 
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(logn), where `n` is the length of character in the `letters` array, as at every iteration we discard half of the characters from the consideration.
+    Space: O(1), since we do not use any extra space.
+*/
