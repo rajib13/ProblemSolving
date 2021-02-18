@@ -27,9 +27,19 @@ firstUnique.showFirstUnique(); // return 3
 firstUnique.add(3);            // the queue is now [2,3,5,5,2,3]
 firstUnique.showFirstUnique(); // return -1
 
-
-
-
+class DListNode{
+public:
+   int key, value;
+   DListNode* head;
+   DListNode* tail;
+ 
+   DListNode(int k, int v){
+     key = k;
+     value = v;
+     head = nullptr;
+     tail = nullptr;
+   }
+};
 
 class FirstUnique {
 public:
@@ -58,8 +68,22 @@ public:
         }
     }
 private:
-    unordered_map<int, list<int>::iterator> hashMap;
-    list<int> linkedList; 
+    DListNode *head, *tail;
+    DListNode* 
+    unordered_map<int, DListNode*> hashMap;
+ 
+    void add(DListNode* node){
+       node->next = head->next;
+       node->prev = head;
+       head->next = node;
+       node->next->prev = node;
+       
+    }
+ 
+   void remove(DListNode* node){
+      node->next->prev = node->prev;
+      node->prev->next = node->next;
+   }
 };
 
 /**
