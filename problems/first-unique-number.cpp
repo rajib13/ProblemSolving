@@ -29,13 +29,12 @@ firstUnique.showFirstUnique(); // return -1
 
 class DListNode{
 public:
-   int key, value;
+   int value;
    DListNode* head;
    DListNode* tail;
  
-   DListNode(int k, int v){
-     key = k;
-     value = v;
+   DListNode(int v){
+     this->value = v;
      head = nullptr;
      tail = nullptr;
    }
@@ -47,32 +46,35 @@ public:
         for(int i = 0; i < nums.size(); i++){
             add(nums[i]);
         }
+        
+        head = new DListNode(0);
+        tail = new DListNode(0);
+        head->next = tail;
+        tail->prev = head;
     }
     
     int showFirstUnique() {
-        return linkedList.empty() ? -1 : linkedList.front();
+        return head->val == 0 ? -1 : head->val;
     }
     
     void add(int value) {
         if(hashMap.find(value) == hashMap.end()){
-            linkedList.push_back(value);
-            auto it = linkedList.end();
-            hashMap[value] = --it;
+           DListNode* node = new DListNode(value);
+           addToList(node);
+           hashMap[value] = node;
+                
         }
         else{
-            auto it = hashMap[value];
-            if(it != linkedList.end()){
-                linkedList.erase(it);
-                hashMap[value] = linkedList.end();
-            }
+           DListNode* node = hashMap[value];
+           hashMap.erase(value);
+           removeFromList(node);
         }
     }
 private:
     DListNode *head, *tail;
-    DListNode* 
     unordered_map<int, DListNode*> hashMap;
  
-    void add(DListNode* node){
+    void addToList(DListNode* node){
        node->next = head->next;
        node->prev = head;
        head->next = node;
@@ -80,7 +82,7 @@ private:
        
     }
  
-   void remove(DListNode* node){
+   void removeFromList(DListNode* node){
       node->next->prev = node->prev;
       node->prev->next = node->next;
    }
