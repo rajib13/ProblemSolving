@@ -1,4 +1,3 @@
-
 Problem Statement: 
 
 You have a queue of integers, you need to retrieve the first unique integer in the queue.
@@ -41,7 +40,6 @@ public:
     }
     
     int showFirstUnique() {
-        
         return linkedList.empty() ? -1 : linkedList.front();
     }
     
@@ -57,9 +55,7 @@ public:
                 linkedList.erase(it);
                 hashMap[value] = linkedList.end();
             }
-            
         }
-        
     }
 private:
     unordered_map<int, list<int>::iterator> hashMap;
