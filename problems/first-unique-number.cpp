@@ -35,8 +35,8 @@ public:
  
    DListNode(int v){
      this->value = v;
-     head = nullptr;
-     tail = nullptr;
+     this->head = nullptr;
+     this->tail = nullptr;
    }
 };
 
@@ -46,23 +46,21 @@ public:
         for(int i = 0; i < nums.size(); i++){
             add(nums[i]);
         }
-        
-        head = new DListNode(0);
-        tail = new DListNode(0);
+        head = new DListNode(-1);
+        tail = new DListNode(-1);
         head->next = tail;
         tail->prev = head;
     }
     
     int showFirstUnique() {
-        return head->val == 0 ? -1 : head->val;
+        return head->val;
     }
     
     void add(int value) {
         if(hashMap.find(value) == hashMap.end()){
            DListNode* node = new DListNode(value);
            addToList(node);
-           hashMap[value] = node;
-                
+           hashMap[value] = node; 
         }
         else{
            DListNode* node = hashMap[value];
@@ -79,7 +77,6 @@ private:
        node->prev = head;
        head->next = node;
        node->next->prev = node;
-       
     }
  
    void removeFromList(DListNode* node){
