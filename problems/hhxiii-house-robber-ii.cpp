@@ -18,8 +18,6 @@ public:
     }
 };
 
-
-
 /*
     Complexity analysis:
     Time: O(n), where `n` is the lenght of the given nums, as we need to scan the entire nums twice.
