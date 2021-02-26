@@ -12,33 +12,8 @@ public:
     }
 };
 
-
-
-
 /*
-
-Approach 1: DP
-
-class Solution {
-public:
-    int rob(vector<int>& nums) {
-        vector<int> memo;
-        int numsSize = nums.size();
-        if(numsSize == 0) return 0;
-        else if(numsSize == 1) return nums[0];
-        else if(numsSize == 2) return max(nums[0], nums[1]);
-        else{
-            memo.push_back(nums[0]);
-            memo.push_back(max(nums[0], nums[1]));
-            
-            for(int i =2; i< numsSize; i++){
-                int temp = max(nums[i] + memo[i - 2], memo[i - 1]);
-                memo.push_back(temp);
-            }
-        }
-        return memo[numsSize - 1];
-    }
-};
-
-
+    Complexity analysis:
+    Time: O(n), where `n` is the length of the array, as we need to iterate over the entire array.
+    Space: O(1), since we do not use any extra space;
 */
