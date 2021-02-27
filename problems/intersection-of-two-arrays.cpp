@@ -1,23 +1,20 @@
 class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
-        
-        sort(nums1.begin(), nums1.end());
-        sort(nums2.begin(), nums2.end());
-        
+        unordered_set<int> set(nums1.begin(), nums1.end());
         vector<int> ret;
-        int p1 = 0; 
-        int p2 = 0; 
-        while(p1 < nums1.size() and p2 < nums2.size()){
-            if(nums1[p1] == nums2[p2] and (ret.empty() or ret.back() != nums1[p1])){
-                ret.push_back(nums1[p1]);
-                p1++;
-                p2++;
+        
+        for(int num : nums2){
+            if(set.erase(num) > 0){ // find and erase in combine, returns 1 if the num could be deleted.
+                ret.push_back(num);
             }
-            else if(nums1[p1] > nums2[p2]) p2++;
-            else p1++;
         }
         return ret;
-        
     }
 };
+
+/*
+    Time Complexity:
+    Time: O(n), where `n` is the size of the largest length of two given arrays.
+    Space: O(1), since we do not need to 
+*/
