@@ -16,5 +16,5 @@ public:
 /*
     Time Complexity:
     Time: O(n), where `n` is the size of the largest length of two given arrays.
-    Space: O(1), since we do not need to 
+    Space: O(n), since we store the `nums1` into to the set.
 */
