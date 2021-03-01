@@ -22,9 +22,8 @@ public:
     }
 };
 
-
 /*
-Complexity Analysis:
-Time: O(n), where n is the smallest list size between the given A and B.
-Space: O(1), as we did not use any extra space other than return vector ret.
+    Complexity Analysis:
+    Time: O(n), where `n` is the smallest list size between the given A and B.
+    Space: O(1), as we did not use any extra space.
 */
