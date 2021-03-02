@@ -21,7 +21,7 @@ public:
 };
 
 /*
-Complexity analysis:
-Time : O(n), as we need to scan all range in the ranges.
-Space: O(1), as we do use any extra space other than return result vector.
+    Complexity analysis:
+    Time : O(n), as we need to scan every range in the ranges.
+    Space: O(1), as we do not use any extra space.
 */
