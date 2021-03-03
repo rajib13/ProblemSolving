@@ -42,13 +42,12 @@ public:
         return root;
     }
 };
-
 */
 
 
 /*
-Complexity Analysis:
-Time: O(n), as we need scan all nodes at least once, where n is the number of nodes of the given tree.
-Space: O(n), as in worst case we the queue ( resp. for the DFS, call stack) needs to hold [n/2] (resp. height of the tree h) nodes. 
+    Complexity Analysis:
+    Time: O(n), as we need to scan all nodes at least once, where `n` is the number of nodes of the given tree.
+    Space: O(n), as in worst case the queue (resp. in recursive approach for the DFS, call stack) needs to hold [n/2] (resp. height of the tree h) nodes. 
 
 */
