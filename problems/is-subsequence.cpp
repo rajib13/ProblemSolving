@@ -12,6 +12,8 @@ public:
     }
 };
 
-/*Complexity Analysis:
-Time: O(n), where n is the lengtth of the t
-Space: O(1), since we do not use any extra space.*/
+/*
+    Complexity Analysis:
+    Time: O(n), where `n` is the lengtth of the logest string.
+    Space: O(1), since we do not use any extra space.
+*/
