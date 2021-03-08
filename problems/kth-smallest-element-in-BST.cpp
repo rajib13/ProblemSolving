@@ -27,7 +27,7 @@ public:
 };
 
 /*
-Complexity Analysis:
-Time: O(n), in worst case we need to scan all elements, n == k. 
-Space: O(n), in left skewed tree. 
+    Complexity Analysis:
+    Time: O(n), in worst case (left skewed tree) we need to scan all elements. 
+    Space: O(n), if the tree is left skewed tree, then the stack needs to store all nodes down to the leaf.
 */
