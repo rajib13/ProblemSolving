@@ -1,7 +1,6 @@
 class Solution {
 public:
     int lastStoneWeight(vector<int>& stones) {
-        
         priority_queue<int> maxHeap;
         for(int i = 0; i<stones.size(); i++){
             maxHeap.push(stones[i]);
@@ -19,6 +18,6 @@ public:
 };
 
 /*
-Time complexity: O(n), as we need scan every element at least once.
-Space complexity: O(n), as we need to store all elements into the priority queue.
+    Time complexity: O(n), as we need scan every element at least once.
+    Space complexity: O(n), as we need to store all elements into the priority queue.
 */
