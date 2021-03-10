@@ -25,7 +25,7 @@ public:
 };
 
 /*
-Complexity analysis: 
-Time: O(n logn), as we sorted the frequency of the given array elements. 
-Space: O(n), since we used hashmap to store the frequency. 
+    Complexity analysis: 
+    Time: O(n logn), as we sorted the frequency of the given array elements. 
+    Space: O(n), since we used hashmap to store the frequency. 
 */
