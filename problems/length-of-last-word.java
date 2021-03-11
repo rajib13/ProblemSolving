@@ -12,4 +12,10 @@ class Solution {
     }
 }
 
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is the length of the given string, as we scan every char.
+    Space: O(1), since wee do not use any extra space throughout the entire program.
+*/
+
 
