@@ -11,7 +11,7 @@ public:
             }
             else if(nums[i] > secondBiggest) secondBiggest = nums[i]; 
         }
-        return (biggest-1)*(secondBiggest-1);
+        return (biggest - 1) *(secondBiggest - 1);
     }
 };
 
