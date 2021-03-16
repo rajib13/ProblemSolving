@@ -40,3 +40,9 @@ public:
         return head;
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(kn), where `k` is the lists size and `n` is the length of the longest list.
+    Space: O(1), since wee do not use any extra space.
+*/
