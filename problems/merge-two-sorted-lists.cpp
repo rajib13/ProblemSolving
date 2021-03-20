@@ -29,3 +29,9 @@ public:
         return head3->next; 
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is th length of the longest list.
+    Space: O(1), since we do not use any extra space.
+*/
