@@ -49,15 +49,7 @@ public:
 };
 
 /*
-Test Cases:
-
-[3,2,0,-4]
-1
-[1,2]
-0
-[1]
--1
-[1]
-0
-
+    Complexity analysis:
+    Time: O(n), where `n` is the number of nodes in the given linked list, as we need to scan all nodes at least once.
+    Space: O(1), since we do not use any extra space.
 */
