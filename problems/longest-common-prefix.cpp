@@ -1,7 +1,6 @@
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
-        
         if(strs.empty()) return "";
         
         int charCount = INT_MAX;
@@ -16,34 +15,13 @@ public:
         }
         
         return strs[0].substr(0, charCount); 
-
-        
     }
 };
 
 /*
-Approach 2.
-    
-            
-        if(strs.empty()) return "";
-        
-        string prefix = "";
-        int i = 1;
-        while( i <= strs[0].size()){
-            prefix = strs[0].substr(0, i);
-            for(int j = 1; j < strs.size(); j++){
-                
-                string temp = strs[j].substr(0, i);
-                if(temp != prefix) {
-                    return prefix.substr(0, prefix.size()-1);
-                }
-            }
-            
-            i++;
-        }
-
-
-        return prefix; 
+    Complexity analysis:
+    Time: O(mn), where `m` is the array size and `n` is the longest word size.
+    Space: O(1), since we do not use any extra space.
 */
 
 
