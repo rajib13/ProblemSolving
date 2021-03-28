@@ -25,11 +25,7 @@ public:
 };
 
 /*
-"abcabcbb"
-"pwwkew"
-"bbbbb"
-"        "
-" "
-"dvdf"
-"abccbabacd"
+    Complexity analysis:
+    Time: O(n), where `n` is the length of the string, as we need to scan all chars of the string.
+    Space: O(n), since we use a map to store chars.
 */
