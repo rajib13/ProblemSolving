@@ -1,7 +1,6 @@
 class Solution {
 public:
     int maximum69Number (int num) {
-        
         string str = to_string(num);
         int ret = 0; 
         bool flag = true;
@@ -14,3 +13,9 @@ public:
         return ret; 
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(1), as the given number is an integer, the maximum length of the string could be 10.
+    Space: O(1), since we do not use any extra space.
+*/
