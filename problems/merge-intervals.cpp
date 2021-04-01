@@ -23,5 +23,5 @@ public:
 /*
     Time Complexity: 
     Time: O(n log n), where `n` is the length of the given intervals, as we need to sort the intervals.
-    Space: O(1), since we do not use any extra space;
+    Space: O(1), since we do not use any extra space.
 */
