@@ -1,7 +1,6 @@
 class Solution {
 public:
     int minFlips(int a, int b, int c) {
-        
         /*First, convert to bit strings.*/
         string A = bitset<32>(a).to_string(); 
         string B = bitset<32>(b).to_string();
@@ -18,9 +17,14 @@ public:
             }
         }
         return count;
-        
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(1), as the algorithm does not depend on the input.
+    Space: O(1), since we do not use any extra space.
+*/
 
 
 
