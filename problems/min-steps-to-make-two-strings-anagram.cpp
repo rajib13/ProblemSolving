@@ -20,25 +20,7 @@ public:
 };
 
 /*
-"bab"
-"aba"
-"family"
-"friend"
-"leetcode"
-"practice"
-"anagram"
-"mangaar"
-"xxyyzz"
-"xxyyzz"
-"aba"
-"bab"
-"friend"
-"family"
-"practice"
-"leetcode"
-"mangaar"
-"anagram"
-"xxyyzz"
-"xxyyzz"
-
+    Complexity analysis:
+    Time: O(n), where `n` is the length of the string, as we need to scan every char of both of the string.
+    Space: O(1), since we do not use any extra space.
 */
