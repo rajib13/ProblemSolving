@@ -11,14 +11,13 @@ public:
                 else nums[i] = nums[i-1];
             }
         }
-        
         return count <= 1; 
     }
 };
 
 
 /*
-Approach 1 : two pass algorithm
+Approach 2: two pass algorithm
 
 class Solution {
 public:
@@ -40,26 +39,11 @@ public:
         return true; 
     }
 };
-
 */
 
 
-
 /*
-
-[4,2,3]
-[3,4,2]
-[4,3,2]
-[3,2,4]
-[2,3,4]
-[2,4,3]
-[4,2,3]
-[1,2,3]
-[]
-[1]
-[2,3]
-[3,2]
-[3,4,2,3]
-[-1,4,2,3]
-[2,3,3,2,4]
+    Complexity analysis:
+    Time: O(n), where `n` is the length of the `points`, as we need to scan every point once.
+    Space: O(1), since we do not use any extra space.
 */
