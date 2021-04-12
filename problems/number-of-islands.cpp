@@ -23,3 +23,9 @@ public:
         return count;
     }
 };
+
+/*
+    Complexity Analysis:
+    Time: O(mn), where `m` and `n` are the given grid size, as we need to scan all array elements once.
+    Space: O(mn), since we recursively call the `dfs` function. 
+*/
