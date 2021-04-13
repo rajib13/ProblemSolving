@@ -1,12 +1,9 @@
 class Solution {
 public:
     int maxProduct(vector<int>& nums) {
-        
         int localMax = nums[0];
         int localMin = nums[0];
-        
         int globalMax = nums[0];
-        
         
         for(int i = 1; i < nums.size(); i++){
             
@@ -25,3 +22,9 @@ public:
         return globalMax;
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is the length of the given `nums`, as we need to scan every element once.
+    Space: O(1), since we do not use any extra space.
+*/
