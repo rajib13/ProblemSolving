@@ -29,3 +29,9 @@ public:
         return largestSize * largestSize;
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(mn), where `m` and `n` are the rows and colsums of the given matrix, as we need to scan every element once.
+    Space: O(1), since we do not use any extra space.
+*/
