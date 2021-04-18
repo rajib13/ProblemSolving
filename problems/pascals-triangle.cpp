@@ -19,7 +19,8 @@ public:
     } 
 };
 
-/*Complexity Analysis: 
-Time: O(n^2), where n is the number of the rows.
-Space: O(n^2), since we need to send all rows upto the given numRows.
+/*
+    Complexity Analysis: 
+    Time: O(n^2), where `n` is the given number of the rows.
+    Space: O(n^2), since we need to send all rows upto the given numRows.
 */
