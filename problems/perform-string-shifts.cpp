@@ -19,7 +19,7 @@ public:
 };
 
 /*
-Complexity Analysis:
-Time: O(n), where n is the size of shifts.
-Space: O(1), as we do not use any extra space.
+    Complexity analysis:
+    Time: O(n), where `n` is the size of the given shifts, as we need to scan every shift once.
+    Space: O(1), as we do not use any extra space.
 */
