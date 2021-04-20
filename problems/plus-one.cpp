@@ -1,9 +1,7 @@
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
-        
         int i = digits.size() - 1;
-        
         while(i >= 0 && digits[i] == 9){
             digits[i] = 0; 
             i--;
@@ -15,12 +13,11 @@ public:
         else digits[i] += 1;
         
         return digits; 
-        
     }
 };
 
 /*
-Complexity analysis:
-Time: O(n), as we need scan in worst case the whole array.
-Space: O(1), as we do not need any extra space.
+    Complexity analysis:
+    Time: O(n), as we need scan in worst case the whole array.
+    Space: O(1), as we do not need any extra space.
 */
