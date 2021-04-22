@@ -25,3 +25,9 @@ public:
         
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is the number of nodes in the given linkedlist, as we need to scan all nodes at least once.
+    Space: O(n), as we store the value of nodes into the vector and later the position into the stack.
+*/
