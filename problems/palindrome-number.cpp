@@ -15,7 +15,7 @@ public:
           
           
           /*Check: All negative numbers and a number that has 0 as the last digit are not palindrome. But note that 0 itself is a palindrome. */
-          if(x < 0 || (x%10 == 0 && x != 0)) return false;  
+          if(x < 0 || (x % 10 == 0 && x != 0)) return false;  
           
           int reverse = 0; 
           
@@ -34,6 +34,12 @@ public:
       }
 
 };
+
+/*
+    Complexity analysis:
+    Time: O(log10(n)), where `n` is the number we are given. 
+    Space: O(1), as we do not use any extra space.
+*/
 
 /* Approach 2: For all positive numbers reverse the whole number and then check if the given number and the reverse is same. O(log10 n) and O(1) space. 
 
@@ -58,24 +64,3 @@ public:
 
 */
 
-
-
-
-/* Approach 3: converting integer to string. 
-
-    bool isPalindrome(int x) {
-        
-        string str = to_string(x);
-        int strLen = str.size();
-        
-        for(int i=0; i<strLen/2; i++){
-            if(str[i] != str[strLen-1-i]){
-                return false;
-            }
-            
-        }
-        return true; 
-    }
-
-
-*/
