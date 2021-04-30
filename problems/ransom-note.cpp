@@ -12,6 +12,8 @@ public:
     }
 };
 
-/*Complexity Analysis:
-Time: O(m+n), where m and n are the length of magazine and ransom note respectively.
-Space: o(1), since we used only a vector of size 26.*/
+/*
+    Complexity analysis:
+    Time: O(m+n), where`m` and `n` are the length of magazine and ransom note respectively.
+    Space: o(1), since we used only a vector of size 26.
+*/
