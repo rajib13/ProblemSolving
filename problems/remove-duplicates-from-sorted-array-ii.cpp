@@ -8,3 +8,9 @@ public:
         return count;
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is the length of the given nums, as we need scan every element of the nums once.
+    Space: o(1), since we used only a vector of size 26.
+*/
