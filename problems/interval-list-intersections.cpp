@@ -23,7 +23,7 @@ public:
 };
 
 /*
-    Complexity Analysis:
+    Complexity analysis:
     Time: O(n), where `n` is the smallest list size between the given A and B.
     Space: O(1), as we did not use any extra space.
 */
