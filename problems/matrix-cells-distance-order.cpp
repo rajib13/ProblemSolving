@@ -4,7 +4,7 @@ public:
         vector<vector<int>> seen(R, vector<int>(C, 0)); 
         vector<vector<int>> ret;
         queue<pair<int, int>> q;
-        // Initialize the queue with given position. 
+        // Initialize the queue with the given position. 
         q.push({r,c});
         seen[r][c] = 1;
         
@@ -31,3 +31,9 @@ public:
         
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(mn), where `m` and `n` are the length of the sides of the matrix.
+    Space: O(mn(), as we need to store the matrix elements into the queue.
+*/
