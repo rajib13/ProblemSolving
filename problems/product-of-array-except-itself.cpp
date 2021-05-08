@@ -19,7 +19,7 @@ public:
 };
 
 /*
-Complexity Analysis
-Time: O(n), as we scan the given array at least once.
-Space: O(1), as we do not use any extra space and return vector is not in consider. 
+    Complexity analysis
+    Time: O(n), whwere `n` is the legth of the given nums, as we scan all elements at least once.
+    Space: O(1), as we do not use any extra space.
 */
