@@ -13,7 +13,6 @@ public:
         
         ListNode* root = head;
         while(head){
-            
             while(head->next and head->val == head->next->val){
                 head->next = head->next->next;
             } 
