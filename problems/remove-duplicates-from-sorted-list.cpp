@@ -21,3 +21,9 @@ public:
         return root; 
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is the number of nodes in the given linked list, as we scan all nodes once. 
+    Space: O(1), since we do not use any extra space. 
+*/ 
