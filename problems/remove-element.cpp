@@ -13,6 +13,6 @@ public:
 
 /*
     Complexity analysis:
-    Time: O(n), where `n` is the number of elements in the nums, as we need to 
+    Time: O(n), where `n` is length of the given nums, as we need to scan every number. 
     Space: O(1), since we do not use any extra space. 
 */ 
