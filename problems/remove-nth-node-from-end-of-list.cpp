@@ -26,18 +26,9 @@ public:
     }
 };
 
-/*Complexity Analysis: O(n) time as we need to traverse all link nodes at least once and O(1) space, as we did not use any extra space. */
-
 /*
-Test Cases:
-[1,2,3,4,5]
-1
-[1,2,3,4,5]
-2
-[1,2,3,4,5]
-3
-[1,2,3,4,5]
-4
-[1,2,3,4,5]
-5
-*/
+    Complexity analysis:
+    Time: O(n), where `n` is length of the given linked list, as we need to scan every node.
+    Space: O(1), since we do not use any extra space. 
+*/ 
+
