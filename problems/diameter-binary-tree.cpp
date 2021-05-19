@@ -18,17 +18,15 @@ public:
         return max(left, right) + 1; 
     }
     int diameterOfBinaryTree(TreeNode* root) {
-        
         if(root == nullptr) return 0;
         dfs(root);
         
         return maxx;
-        
     }
 };
 
 /*
-    Complexity:
-    Time: O(n), where n is the node number in the given tree.
-    Space: O(log n), the stack space.
+    Complexity analysis:
+    Time: O(n), where `n` is the number of nodes in the given tree, as we need to traverse the entire tree once.
+    Space: O(n), since we use the recursion approach, there will stack space, in the worst case (left or right skewed tree) the stack will hold `n` nodes.
 */
