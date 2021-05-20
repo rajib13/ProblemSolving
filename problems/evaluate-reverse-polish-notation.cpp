@@ -5,7 +5,7 @@ public:
         
         for(string token : tokens){
             if(token.size()  > 1  or isdigit(token[0])){
-			numbers.push(stoi(token));
+		numbers.push(stoi(token));
             } else {
                 int oprnd1 = numbers.top(); numbers.pop();
                 int oprnd2 = numbers.top(); numbers.pop();
@@ -20,7 +20,7 @@ public:
 };
 
 /*
-	Complexity analysis:
-	Time: O(n), as we need to scan all tokens.
-	Space: O(n), since we store the numbers in the stack.
+    Complexity analysis:
+    Time: O(n), where `n` is the length of given tokens, as we need to scan every token.
+    Space: O(n), since we use stack as an auxiliary space to store the integer of tokens. 
 */
