@@ -21,9 +21,8 @@ public:
     }
 };
 
-
 /*
     Complexity analysis:
-    Time: O(logn), where `n` is the maximum possible length.
+    Time: O(logn), where `n` is the maximum possible length, as in every iteration we discard half of the length.
     Space: O(1), since we do not use any extra space.
 */
