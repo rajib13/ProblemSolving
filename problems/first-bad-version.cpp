@@ -19,5 +19,5 @@ public:
 /* 
     Complexity analysis: 
     Time: O(logn), as we reduce the search space by half every time.
-    Space: O(1), as we do not use any extra space.
+    Space: O(1), since we do not use any extra space.
 */
