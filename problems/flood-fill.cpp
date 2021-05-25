@@ -20,7 +20,7 @@ public:
 };
 
 /*
-    Complexity Analysis:
-    Time: O(n), where n is the total number of pixels in the given image.
-    Space : O(n), the recursive call stack.
+    Complexity analysis:
+    Time: O(n), where `n` is the total number of pixels in the given image.
+    Space : O(n), since we use the recursion, in worst case the recursive call stack will take `n` space. 
 */
