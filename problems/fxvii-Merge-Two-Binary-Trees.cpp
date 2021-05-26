@@ -19,8 +19,9 @@ public:
         return t1;
     }
 };
+
 /*
     Complexity analysis:
-    Time: O(n), where `n` is the length of tree with fewer nodes.
+    Time: O(n), where `n` is the length of either of the given trees with fewer nodes.
     Space: O(n), for the recursion stack space.
 */
