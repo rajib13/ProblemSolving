@@ -1,7 +1,6 @@
 class Solution {
 public:
     string reformatDate(string str) {
-        
         unordered_map<string, string> m;
         m["Jan"] = "01";
         m["Feb"] = "02";
@@ -23,20 +22,17 @@ public:
         int d; 
         int i = 0;
         string date = "";
-        while(ss >> word){
+        while(ss >> word) {
             if(i == 0){
                 stringstream ss(word);
                 ss >> d;
-                
                 date = to_string(d);
-
                 if(date.size() == 1) date.insert(date.begin(), '0');
-                
             }
-            else if(i == 1){
+            else if(i == 1) {
                 month = m[word];
             }
-            else{
+            else {
                 year = word;
             }
             i++;
@@ -44,4 +40,10 @@ public:
         return year + "-" + month + '-' + date;
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(1), as the given string containts only three words.
+    Space: o(1), since our used space (map) do not depend on the input.
+*/
 
