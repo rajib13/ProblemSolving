@@ -1,7 +1,6 @@
 class Solution {
 public:
     int romanToInt(string s) {
-        
         unordered_map<char, int> exchange; // To map the roman and integer number. 
         exchange['I'] = 1;
         exchange['V'] = 5;
@@ -20,3 +19,9 @@ public:
         return ret;
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is the length of the given string, as we need scan every element of the nums once.
+    Space: o(1), since we used only a vector of size 26.
+*/
