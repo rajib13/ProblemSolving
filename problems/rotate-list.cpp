@@ -10,7 +10,10 @@ class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
         if(head == nullptr) return head;
-        ListNode* root = head;
+        
+        // store the head to re-use
+        ListNode* root = head; 
+        // First, count the number of nodes in the given list
         int nodeCount = 0;
         while(root){
             root = root->next;
@@ -21,37 +24,23 @@ public:
         
         root = head;
         ListNode* prevNode = nullptr;
-        
+        // Traverse until k nodes left
        for(int i = 0; i < nodeCount - k; i++){
             prevNode = root;
             root = root->next;
         }
         prevNode->next = nullptr;
         ListNode* temp = root;
+        // Lastly, join the tail to the head of the list
         while(temp->next) temp = temp->next;
         temp->next = head;
-        
     
         return root;
     }
 };
 
 /*
-[1,2,3,4,5]
-1
-[1,2,3,4,5]
-2
-[1,2,3,4,5]
-3
-[1,2,3,4,5]
-4
-[1,2,3,4,5]
-5
-[1,2,3,4,5]
-6
-[1,2,3,4,5]
-7
-[1,2,3,4,5]
-192
-
+    Complexity analysis:
+    Time: O(n), where `n` is the number of nodes in the given list, as we need to traverse the list at least once.
+    Space: o(1), since we do not use any auxiliary space.
 */
