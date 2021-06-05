@@ -21,8 +21,8 @@ public:
     }
 };
 
-
-/*Complexity Analysis:
-Time: O(h), where h is the height of the given tree.
-Space:(1), since we did not use any extra space.
+/*
+    Complexity analysis:
+    Time: O(h), where `h` is the height of the given tree, as in iteration we will discard half of the nodes.
+    Space:(1), since we do not use any extra space.
 */
