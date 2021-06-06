@@ -23,7 +23,7 @@ public:
 };
 
 /*
-Complexity analysis:
-Time: O(log n), as at every iteration we removed half of the elements.
-Space: O(1), since throughout the entire program we did not use any extra space.
+    Complexity analysis:
+    Time: O(log n), as at every iteration we removed half of the elements.
+    Space: O(1), since throughout the entire program we did not use any extra space.
 */
