@@ -1,7 +1,6 @@
 class Solution {
 public:
     int searchInsert(vector<int>& nums, int target) {
-        
         int low = 0; 
         int high = nums.size()-1;
         
@@ -15,7 +14,8 @@ public:
     }
 };
 
-/* Complexity Analysis:
-Time : O(logn), as we pruned half of the input at every iteration.
-Space: O(1), as we did not use any extra space. 
+/* 
+    Complexity analysis:
+    Time : O(logn), where `n` is the number of elements in the given nums array, as we discard half of the input at every iteration.
+    Space: O(1), since we do not use any extra space. 
 */
