@@ -10,7 +10,8 @@ public:
     }
 };
 
-/*Complexity Analysis:
-Time : O(n), where n is the number of elements in the given array.
-Space: O(1), since we did not use any extra space.
+/*
+	Complexity analysis:
+	Time : O(n), where `n` is the number of elements in the given array, as we need to scan all elements once.
+	Space: O(1), since we do not use any extra space.
 */
