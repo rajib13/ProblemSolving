@@ -6,10 +6,11 @@ public:
             single_number ^= nums[i]; 
         }
         return single_number;
-        
     }
 };
 
-/*Complexity Analysis:
-Time: O(n), as we need to scan all elements once.
-Space: O(1), since we did not use any extra space.*/
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is the lenght of the given nums, as we need to scan all elements once.
+    Space: O(1), since we do not use any extra space.
+*/
