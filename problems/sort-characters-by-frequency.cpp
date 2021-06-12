@@ -1,7 +1,6 @@
 class Solution {
 public:
     string frequencySort(string s) {
-        
         unordered_map<char, int> map;
         priority_queue<pair<int, char>> heap;
         string ret = "";
@@ -24,29 +23,7 @@ public:
 };
 
 /*
-Second approach: 
+    Complexity analysis:
+    Time: O(nlogn), where `n` is the length of the given string, as we need to scan every character of the string once.
+    Space: O(n), since we use a map and heap to store the frequency of the characters. 
 */
-
-class Solution {
-public:
-    string frequencySort(string s) {
-        int n = s.size();
-        unordered_map<char, int> map;
-        vector<string> freq(n+1, "");
-        string ret = "";
-        
-        for(char ch : s) map[ch]++;
-        
-        for(auto item : map){
-            char ch = item.first;
-            int pos = item.second;
-            freq[pos].append(pos, ch);
-        }
-        
-        for(int i = n; i >= 0; i--){
-            if(freq[i] != "")
-                ret += freq[i];
-        }
-        return ret;
-    }
-};
