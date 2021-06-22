@@ -56,4 +56,8 @@ public:
     }
 };
 
-
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is the number of nodes in the given tree, as we need to iterate through the entire tree once.
+    Space: O(n), in worst case (left or right skewed tree), we need to stroe `n` nodes in the recursion call stack.
+*/
