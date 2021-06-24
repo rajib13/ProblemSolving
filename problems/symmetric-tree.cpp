@@ -10,7 +10,6 @@
 class Solution {
 public:
     bool isSymmetric(TreeNode* root) {
-        
         stack<TreeNode*> nodes; // To improve the space complexity, we only use one stack. 
         TreeNode* root1 = root; // For traversing the right side of the tree.
         
@@ -35,8 +34,8 @@ public:
     }
 };
 
-
-/*Complexity analysis:
-Time: O(n), where n is the number of nodes.
-Space: O(h), where h is the height of the tree.
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is the number of nodes in the given tree, as we need to iterate through the entire tree once.
+    Space: O(n), in worst case (left or right skewed tree), we need to stroe `n` nodes in the recursion call stack.
 */
