@@ -15,11 +15,12 @@ public:
             if(left <= right) ret.push_back(arr[j--]);
             else ret.push_back(arr[i++]);
         }
-        
         return ret;
     }
 };
 
-/*Complexity Analysis: 
-Time: O(n logn), where n is the total elements in the given array.
-Space: O(logn), for the sorting algorithm.*/
+/*
+    Complexity analysis: 
+    Time: O(n logn), where `n` is the total elements in the given array, as we sort the array. 
+    Space: O(1), if we use in-place sort. 
+*/
