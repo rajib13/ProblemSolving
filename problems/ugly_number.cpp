@@ -12,6 +12,7 @@ public:
 };
 
 /*
-Time complexity: As we always divide the numbers so the overall time complexity is O(log n)
-Space complexity: O(1) as we do not need any extra space. 
+    Complexity analysis: 
+    Time: O(log n), as the `while` runs at most log(n) times for 2, 3, 5
+    Space: O(1), since we do not use any extra space
 */
