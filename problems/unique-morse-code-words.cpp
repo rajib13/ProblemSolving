@@ -14,3 +14,10 @@ public:
         return ret.size();
     }
 };
+
+/*
+    Complexity analysis: 
+    Time: O(m*n), where `m` and `n` are the number of words and the length of the longest word, respectively, 
+          as we need scan every character of every given word.
+    Space: O(1), since we do not use any extra space
+*/
