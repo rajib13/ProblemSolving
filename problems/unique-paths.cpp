@@ -10,35 +10,11 @@ public:
         }
         
         return dp[col-1];
-        
     }
 };
 /*
-Complexity Analysis:
-Time: O(mn) where m is the row and n is the column.
-Space: O(n), since we store only previous column.
-
-*/
-
-
-/*
-class Solution {
-public:
-    int uniquePaths(int row, int col) {
-        //Approach 1:  Two rows are enough to produce the result. We generate the second row from the first one.
- 
-        vector<vector<int>> dp(2, vector<int> (col, 1));
-        
-        for(int r = 1; r < row; r++){
-            for(int c = 1; c < col; c++){
-                dp[1][c] = dp[0][c] + dp[1][c-1];
-            }
-            for(int c = 1; c < col; c++)
-                dp[0][c] = dp[1][c];
-        }
-        
-        return dp[1][col-1];
-        
-    }
-};
+    Complexity analysis: 
+    Time: O(m*n), where `m` and `n` are the given number of rows and cols, respectively, 
+          as we need to scan every element in the grid making by row and col.
+    Space: O(n), since we use an auxiliary space to store the intemediate results. 
 */
