@@ -33,6 +33,6 @@ public:
 /*
     Complexity analysis: 
     Time: O(m*n), where `m` and `n` are the number of rows and cols in the given grid, respectively, 
-          as we need scan every element of the grid.
-    Space: O(mn), since we use an auxiliary space to to store the intemediate results. 
+          as we need to scan every element of the grid.
+    Space: O(mn), since we use an auxiliary space to store the intemediate results. 
 */
