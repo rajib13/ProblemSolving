@@ -21,5 +21,5 @@ class Solution {
 /*
     Complexity analysis:
     Time: O(n), where `n` is the length of the given string, as we need to scan every character of the string.
-    Space: O1n), since we do not use any extra space.
+    Space: O(1), since we do not use any extra space.
 */
