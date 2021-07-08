@@ -15,7 +15,7 @@ public:
 };
 
 /*
-Complexity Analysis:
-Time: O(n), as we need to scan all chars of the given string at once.
-Space: O(1), as we did not use any extra space. 
+    Complexity analysis:
+    Time: O(n), where `n` is the length of the given string, as we need to scan all chars of the given string at once.
+    Space: O(1), since we do not use any extra space. 
 */
