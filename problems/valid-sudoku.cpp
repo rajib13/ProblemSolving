@@ -22,5 +22,5 @@ public:
 /*
     Complexity analysis:
     Time: O(1), as the size of the chessboard is always same, and in worst case our algorithm will iterate 81 times.
-    Space: O(1), since we use holds constant amount of entries. 
+    Space: O(1), since the set holds constant amount of entries. 
 */
