@@ -16,7 +16,6 @@ public:
     }
     
     bool exist(vector<vector<char>>& board, string word) {
-        
         int row = board.size();
         int col = board[0].size();
         
@@ -30,3 +29,9 @@ public:
         return false;
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(M*N*4^L), where `M` and `N` are the rows and cols respectively and `L` is for the length of the give word. 
+    Space: O(1), since we do not use any extra space. 
+*/
