@@ -37,3 +37,9 @@ public:
         return state == 2 or state == 5 or (seenDigit and state == 6) or state == 7; // Any of the four final cases are fine. 
     }
 };
+
+/*
+    Complexity analysis:
+    Time: O(n), where `n` is the length of the given string, as we need to scan every character of the string.
+    Space: O(1), since we do not use any extra space.
+*/
