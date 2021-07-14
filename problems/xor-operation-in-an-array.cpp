@@ -8,9 +8,8 @@ public:
         return ret;
     }
 };
-
 /*
-Complexity Analysis:
-Time: O(n), as we scan every element once.
-Space: O(1), since we do not use any extra space. 
+    Complexity analysis:
+    Time: O(n), as we need to scan every number from 0.
+    Space: O(1), since we do not use any extra space.
 */
