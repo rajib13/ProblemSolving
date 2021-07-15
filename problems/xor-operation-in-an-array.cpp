@@ -8,6 +8,7 @@ public:
         return ret;
     }
 };
+
 /*
     Complexity analysis:
     Time: O(n), as we need to scan every number from 0.
