@@ -164,7 +164,7 @@ class TextEditor {
 }
 
 class Document {
-    private Map<String, TextEditor> documents;
+    private
     
     public Document(){
         documents = new HashMap<>();
@@ -187,6 +187,7 @@ class Document {
 public class Main
 {
 	public static void main(String[] args) {
+	    
 		TextEditor textEditor = new TextEditor();
 		
 		// insert 
@@ -262,8 +263,8 @@ public class Main
 		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
 		
 		// Documents Test
-		
-		Documents documents = new Documents();
+		private Map<String, TextEditor> documents;
+		Document document = new Document();
 	
 	}
 }
