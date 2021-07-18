@@ -262,7 +262,7 @@ public class Main
 		textEditor.redo();
 		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
 		
-		// Documents Test
+		// Documents Test 
 		private Map<String, TextEditor> documents;
 		Document document = new Document();
 	
