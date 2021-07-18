@@ -8,11 +8,11 @@ class CharNode {
 }
 
 class Edit {
-    String edition; //"DEL", "INS", "LEFT", "RIGHT"
-    CharNode data;
-    public Edit(String edition, CharNode cur) {
-        data = cur;
-        this.edition = edition;
+    String operation; //"DEL", "INS", "LEFT", "RIGHT"
+    CharNode text;
+    public Edit(String operation, CharNode cur) {
+        text = cur;
+        this.operation = operation;
     }
 }
 
@@ -21,12 +21,17 @@ class TextEditor {
     private Stack<Edit> redo_stack;
     private CharNode cursor;
     private CharNode end;
-
+    private StringBuilder clipboard;
+    //private HashMap<Integer, CharNode> data = new HashMap<>();
+    private int size; 
+    
     public TextEditor() {
         undo_stack = new Stack();
         redo_stack = new Stack();
         end = new CharNode('\0');
         cursor = end;
+        size = 0;
+        clipboard = new StringBuilder();
     }
 
     public void moveCursorLeft() {
@@ -42,8 +47,8 @@ class TextEditor {
     }
 
     public void insertCharacter(char ch) {
-        CharNode n = new CharNode(ch);
-        insert(n);
+        CharNode node = new CharNode(ch);
+        insert(node);
         undo_stack.push(new Edit("DEL", null));
     }
 
@@ -55,7 +60,7 @@ class TextEditor {
     public void undo() {
         if(undo_stack.isEmpty()) return;
         Edit edit = undo_stack.pop();
-        switch(edit.edition) {
+        switch(edit.operation) {
             case "LEFT":{
                 redo_stack.push(new Edit("RGIHT", null));
                 cursor = cursor.prev; break;
@@ -68,7 +73,7 @@ class TextEditor {
                 delete(cursor.prev); break;
             case "INS":
                 redo_stack.push(new Edit("DEL", null));
-                insert(edit.data); break;
+                insert(edit.text); break;
             default:
                 return;
         }
@@ -77,7 +82,7 @@ class TextEditor {
     public void redo() {
         if(redo_stack.isEmpty()) return;
         Edit edit = redo_stack.pop();
-        switch(edit.edition) {
+        switch(edit.operation) {
             case "LEFT":
                 undo_stack.push(new Edit("RIGHT", null));
                 cursor = cursor.prev; break;
@@ -89,23 +94,48 @@ class TextEditor {
                 delete(cursor.prev); break;
             case "INS":
                 undo_stack.push(new Edit("DEL", null));
-                insert(edit.data); break;
+                insert(edit.text); break;
             default:
                 return;
         }
     }
-
+    
+    public void copy(int startIndex, int endIndex){
+        if(startIndex <= 0) startIndex = 0;
+        if(endIndex >= size) endIndex = size;
+        clipboard = new StringBuilder();
+        CharNode node = end.prev;
+        int n = size;
+        
+        while(node != null) {
+            if(n < startIndex) break;
+            if(cursor != node && n <= endIndex) {
+                clipboard.insert(0, node.ch);
+            }
+            node = node.prev;
+            if(cursor != node) n--;
+        }
+        System.out.println("Clipboard: " + clipboard.toString());
+    }
+    
+    public void paste() {
+        for(int i = 0 ; i < clipboard.length(); i++){
+            char curr = clipboard.charAt(i);
+            insertCharacter(curr);
+        }
+        
+    }
 
     public String toString() {
-        StringBuilder text = new StringBuilder();
-        CharNode n = end.prev;
-        if(cursor == end) text.append('|');
-        while(n != null) {
-            text.insert(0, n.ch);
-            if(cursor == n) text.insert(0, '|');
-            n = n.prev;
+        StringBuilder sb = new StringBuilder();
+        CharNode node = end.prev;
+        if(cursor == end) sb.append('|');
+        while(node != null) {
+            sb.insert(0, node.ch);
+            if(cursor == node) sb.insert(0, '|');
+            node = node.prev;
         }
-        return text.toString();
+        return sb.toString();
     }
 
     private void insert(CharNode node) {
@@ -116,6 +146,7 @@ class TextEditor {
             prev.next = node;
             node.prev = prev;
         }
+        size++;
     }
 
     private CharNode delete(CharNode del) {
@@ -123,8 +154,33 @@ class TextEditor {
             del.prev.next = cursor;
         }
         cursor.prev = del.prev;
+        size--;
         return del;
     }
+    
+    public int getCurrentSize() {
+        return size;
+    }
+}
+
+class Document {
+    private Map<String, TextEditor> documents;
+    
+    public Document(){
+        documents = new HashMap<>();
+    }
+    
+    public TextEditor createDocument(String name) {
+        TextEditor textEditor = new TextEditor();
+        documents.put(name, textEditor);
+        return textEditor;
+    }
+    
+    public void switchDocument(String name) {
+        if(documents.containsKey(name))
+            return documents.get(name);
+    }
+    
 }
 
 
@@ -138,17 +194,17 @@ public class Main
 		textEditor.insertCharacter('c');
 		textEditor.insertCharacter('d');
 		
-		System.out.println(textEditor.toString());
+		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
 		
 		// Move cursor to the first position
 		textEditor.moveCursorLeft();
 		textEditor.moveCursorLeft();
-		System.out.println(textEditor.toString());
+		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
 		
 		
 		// insert b to make the string abcd 
 		textEditor.insertCharacter('b');
-		System.out.println(textEditor.toString());
+		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
 		
 		// Move cursor one step to the right 
 		textEditor.moveCursorRight();
@@ -157,23 +213,57 @@ public class Main
 		// backspace b and c 
 		textEditor.backspace();
 		textEditor.backspace();
-		System.out.println(textEditor.toString());
+	    System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
 		
 		
 		// Undo backspace things
 		textEditor.undo();
 		textEditor.undo();
-		System.out.println(textEditor.toString());
+		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
 		
 		// redo testing 
 		textEditor.redo();
 		textEditor.redo();
-		System.out.println(textEditor.toString());
+		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
 		
 		// Undo backspace things
 		textEditor.undo();
 		textEditor.undo();
-		System.out.println(textEditor.toString());
+		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
+		
+		
+		// Test the Copy method 
+		textEditor.copy(1, 2);
+		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
+		
+		// Test the Paste method 
+		textEditor.paste();
+		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
+		
+		
+		// Copy again
+		textEditor.copy(1,4);
+		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
+		
+		// Paste again 
+		textEditor.paste();
+		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
+		
+		// Undo backspace things
+		textEditor.undo();
+		textEditor.undo();
+		textEditor.undo();
+		textEditor.undo();
+		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
+		
+		// Undo backspace things
+		textEditor.redo();
+		textEditor.redo();
+		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
+		
+		// Documents Test
+		
+		Documents documents = new Documents();
 	
 	}
 }
