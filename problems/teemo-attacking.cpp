@@ -12,6 +12,6 @@ public:
 
 /*
     Complexity analysis:
-    Time: O(n), where `n` is the length of the given `timeSeries`, as we need to scan all elements once.
+    Time: O(n), as we need to scan all elements once.
     Space: O(1), since we did not use any extra space.
 */
