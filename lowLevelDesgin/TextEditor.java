@@ -22,7 +22,6 @@ class TextEditor {
     private CharNode cursor;
     private CharNode end;
     private StringBuilder clipboard;
-    //private HashMap<Integer, CharNode> data = new HashMap<>();
     private int size; 
     
     public TextEditor() {
