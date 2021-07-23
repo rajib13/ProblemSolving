@@ -122,7 +122,6 @@ class TextEditor {
             char curr = clipboard.charAt(i);
             insertCharacter(curr);
         }
-        
     }
 
     public String toString() {
@@ -179,9 +178,7 @@ class Document {
         if(documents.containsKey(name))
             return documents.get(name);
     }
-    
 }
-
 
 public class Main
 {
@@ -201,7 +198,6 @@ public class Main
 		textEditor.moveCursorLeft();
 		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
 		
-		
 		// insert b to make the string abcd 
 		textEditor.insertCharacter('b');
 		System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
@@ -209,12 +205,10 @@ public class Main
 		// Move cursor one step to the right 
 		textEditor.moveCursorRight();
 		
-		
 		// backspace b and c 
 		textEditor.backspace();
 		textEditor.backspace();
-	    System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
-		
+	    	System.out.println("Text : " + textEditor.toString()  + " of size: " + textEditor.getCurrentSize());
 		
 		// Undo backspace things
 		textEditor.undo();
