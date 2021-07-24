@@ -9,7 +9,7 @@ vector<int> absSort(const vector<int>& arr)
 }
 
 /*
-    Complexity Analysis: 
-    Time: O(nlogn), as we use the builtin sort with a custom comparison. 
-    Space: O(n), since the sorting algorithm internally takes O(log n) space.
+    Complexity analysis: 
+    Time: O(nlogn), where `n` is the number of elements in the given array, as we use the builtin sort with a custom comparison. 
+    Space: O(n), the space typically used by compilers in their implementation of sorting operations.
 */  
