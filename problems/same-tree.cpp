@@ -19,5 +19,5 @@ public:
 /*
     Complexity analysis:
     Time: O(n), where `n` is the number of nodes in the given tree, as we need to check the both trees once.
-    Space: o(n), since in worst case (left or right skewed tree) the recursion stack will hold up `n` nodes.
+    Space: o(n), since in worst case (left or right skewed tree) the recursion stack will store `n` nodes.
 */
