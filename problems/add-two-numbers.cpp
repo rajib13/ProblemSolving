@@ -9,7 +9,6 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        
         int sum = 0;
         ListNode* root = new ListNode(0);
         ListNode* curNode = root;
@@ -26,7 +25,6 @@ public:
             sum /= 10;
             
             curNode = curNode->next;
-            
         }
         return root->next;
     }
