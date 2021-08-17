@@ -10,7 +10,7 @@
 class Solution {
 public:
     bool isSymmetric(TreeNode* root) {
-        stack<TreeNode*> nodes; // To improve the space complexity, we only use one stack. 
+        stack<TreeNode*> nodes;
         TreeNode* root1 = root; // For traversing the right side of the tree.
         
         while(!nodes.empty() or root != NULL){
@@ -19,8 +19,8 @@ public:
                 if(root1 == NULL) return false; // In a assymmetric tree, right side could not be invalid. 
                 nodes.push(root1);
                 
-                root = root->left; // We are traversing root to leftmost node.
-                root1 = root1->right; // another pointer to traverse root to rightmost node.
+                root = root->left; // We are traversing from the root to leftmost node.
+                root1 = root1->right; // Another pointer to traverse from the root to rightmost node.
             }
             root = nodes.top(); nodes.pop(); 
             root1 = nodes.top(); nodes.pop();
@@ -29,7 +29,6 @@ public:
             root = root->right;
             root1 = root1->left;
         }
-        
         return true; 
     }
 };
