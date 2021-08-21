@@ -12,7 +12,7 @@ public:
                 
                 if(!set.insert(row).second ||
                    !set.insert(col).second ||
-                   !set.insert(smallSquare).second ) return false;
+                   !set.insert(smallSquare).second) return false;
             }
         }
         return true;
