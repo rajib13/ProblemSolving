@@ -15,5 +15,6 @@ public:
 
 /*
    Complexity analysis:
-   Time: O(m + n), where `m` and `n` is the length of the st
+   Time: O(m + n), where `m` and `n` are the length of the first and second string lengths.
+   Space: O(1), in worst case the hashmap will contain 26 keys.
 */
