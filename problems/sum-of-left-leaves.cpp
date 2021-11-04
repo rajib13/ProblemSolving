@@ -19,15 +19,14 @@
 class Solution {
 public:
     int sumOfLeftLeaves(TreeNode* root) {
+	/***************** Iterative solution *************/
         if(!root) return 0;
         int ret = 0;
-        /***************** Iterative solution *************/
         stack<TreeNode*> nodes;
         
         while(root != NULL || !nodes.empty()){
             bool flag = false;
             while(root != NULL){
-                //push left children if available
                 nodes.push(root);
                 if(!root->left and !root->right and flag) ret += root->val;
                 root = root->left;
@@ -58,5 +57,5 @@ public:
 /*
     Complexity analysis:
     Time: O(n), where `n` is the number of nodes in the given tree, as we need to iterate through the entire tree once.
-    Space: O(n), in worst case (left or right skewed tree), we need to stroe `n` nodes in the stack. 
+    Space: O(n), in worst case (left or right skewed tree), we need to store `n` nodes in the stack. 
 */
