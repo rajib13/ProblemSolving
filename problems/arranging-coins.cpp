@@ -14,10 +14,9 @@ public:
 };
 /*
     Complexity analysis:
-    Time: O(logn), the time complexity of the `sqrt` function.
+    Time: O(log n), the time complexity of the `sqrt` function.
     Space: O(1), as we do not use any extra space.
 */
-
 
 /*
 class Solution {
@@ -40,6 +39,7 @@ public:
     }
 };
 */
+
 /*
     Complexity analysis:
     Time: O(log n), as in every iteration we discard half of the n.
