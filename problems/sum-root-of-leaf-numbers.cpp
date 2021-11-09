@@ -18,13 +18,13 @@ public:
             total += sum;
             return total;
         }
+
         if(root->left) sumNumbers(root->left, sum);
         if(root->right) sumNumbers(root->right, sum);
         
         return total;
     }
 };
-
 
 /*
     Complexity analysis:
