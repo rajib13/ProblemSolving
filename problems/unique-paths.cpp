@@ -1,19 +1,21 @@
 class Solution {
 public:
-    int uniquePaths(int row, int col) {
-        vector<int> dp(col, 1);
-        for(int r = 1; r < row; r++){
-            for(int c = 1; c < col; c++){
-                dp[c] += dp[c-1];
+    int uniquePaths(int m, int n) {
+        vector<vector<int>> dp(n, vector<int>(m, 0));
+        
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                if(i == 0 or j == 0) dp[i][j] = 1;
+                else dp[i][j] = dp[i-1][j] + dp[i][j-1];
             }
         }
-        return dp[col-1];
+        return dp[n-1][m-1];
     }
 };
 
+
 /*
-    Complexity analysis: 
-    Time: O(m*n), where `m` and `n` are the given number of rows and cols, respectively, 
-          as we need to scan every element in the grid formed by the given row and col.
-    Space: O(n), since we use an auxiliary space to store the intemediate results. 
+    Complexity analysis:
+    Time: O(m*n), where `m` and `n` are the number of rows and columns of the given grid, respectively.
+    Space: O(m*n), since we need to store the unique paths for all possible positions. 
 */
