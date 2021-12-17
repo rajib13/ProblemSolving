@@ -19,7 +19,7 @@ public:
                     int left = matrix[i][j-1]-'0';
                     int top =  matrix[i-1][j]-'0';
                     
-                    int size = matrix[i][j] - '0' +  min(topLeft, min(top, left));
+                    int size =  1 +  min(topLeft, min(top, left));
                     largestSize = max(largestSize, size);
                     matrix[i][j] = size + '0'; // as we are dealing with the char matrix and need to insert back. 
                     
@@ -31,7 +31,6 @@ public:
 };
 
 /*
-    Complexity analysis:
-    Time: O(mn), where `m` and `n` are the rows and colsums of the given matrix, as we need to scan every element once.
-    Space: O(1), since we do not use any extra space.
+    Time: O(MN), as we need to scan all elements at least once, where M and N are the row and column respectively. 
+    Space: O(mn), as we modify the given matrix 
 */
